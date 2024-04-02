@@ -1,0 +1,322 @@
+@font-face {
+  font-family: 'Gus';
+  src: local('Gus'), url('./assets/AvenirNextLTPro-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Gus2';
+  src: local('Gus2'), url('./assets/VIVALDII.TTF');
+}
+
+body{
+  background-color:#F3F3EB;
+  display: flex;
+  font-family: 'Gus';
+  justify-content: center;
+}
+
+h1{
+  color: #453831;
+  font-family: 'Gus2';
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+  font-size: 250%;
+}
+
+div.containerInicio{
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+ div.todas, div.casa, div.tesis, div.juntos, div.salud{
+  background-color: #CFD8D7;
+  height:120px;
+  width: 33%;
+  border-radius: 20px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;  
+  align-items:center;
+  border: 3px solid #9e9e9e;
+  font-family: 'Gus';
+  flex-direction: column;
+}
+
+div.escuela, div.familia, div.personal, div.diversion {
+  background-color: #CFD8D7;
+  height:120px;
+  width: 33%;
+  border-radius: 20px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;  
+  align-items:center;
+  border: 3px solid #9e9e9e;
+  font-family: 'Gus';
+  flex-direction: column;
+}
+
+.icono{
+  text-align: center;
+}
+
+button{
+  width: 100%;
+  background-color: #C0091E;
+  border-radius: 10px;
+  padding: 10px;
+  border: 3px solid #3e3e3e;
+  font-size: medium;
+  color: #fffaf8;
+  width: 77%;
+}
+
+.lista-tareas ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-tareas li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Ajusta el espacio entre elementos de la lista */
+}
+
+.lista-tareas label {
+  flex-basis: 50%; /* Ajusta este valor según necesites */
+}
+
+.lista-tareas input,
+.lista-tareas select,
+.lista-tareas textarea {
+  flex-basis: 50%; /* Ajusta este valor según necesites */
+}
+
+.lista-tareas{
+  width: 77%;
+  justify-content: center;
+  align-items: center;
+}
+
+td {
+  white-space: nowrap;
+  text-align: center;
+  padding: 5px;
+}
+
+.tituloTarea{
+  text-align: left;
+}
+
+button.registrar{
+  background-color:#453831;
+  color: #ffffff;
+  margin-top: 10px;
+  width: 77%;
+}
+
+button.aInicio{
+  background-color: #C0091E;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 77%;
+}
+
+.arrow{
+  color:#274001;
+  font-weight: bolder;
+}
+
+.equis{
+  color:#8D5ABF;
+  font-weight: bolder;
+}
+
+.categoria{
+  text-transform:capitalize;
+  text-align:left;
+}
+
+th{
+  background-color:#453831;
+  border-radius: 8px;
+  /* border: 3px solid #DEDEDD; */
+  padding: 5px;
+  color: #f0f0f0;
+}
+
+legend{
+  font-weight:bold;
+  /* background-color: #ffffff; */
+  /* border-radius: 4px;
+  color: #000000;
+  border: 2px solid #767676; */
+  padding:4px;
+}
+
+img {
+  padding: 5px;
+  width: 18px;
+}
+
+.iconito{
+  width: 40px;
+}
+.vacio{
+  background-color:#dededd00;
+  border: none;
+}
+
+.uper{
+  text-transform: capitalize;
+}
+
+fieldset{
+  background-color: #e1eeed;
+  /* background-color:#CFD8D7; */
+  width: 70%;
+  margin-top: 10px;
+}
+
+#completa1, .completa1{
+  text-decoration: line-through;
+}
+
+.completada{
+  color:#367FBF;
+  font-weight: bolder;
+}
+
+h2{
+  text-align: center;
+}
+
+.textoArea {
+  resize: none; /* Evita que se pueda redimensionar manualmente */
+  overflow: hidden; /* Oculta el desbordamiento */
+  height: auto; /* Ajusta automáticamente la altura */
+  width: 100%; /* Expande al 100% del ancho disponible */
+}
+
+.contenedorx{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 350px;
+}
+
+.contenedorcomplejo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+
+}
+.nuevaTarea{
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.textareacompleja{
+  width: 97%;
+}
+
+.tituloInicio{
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+table{
+  border: 3px solid #353535;
+  border-radius: 12px;
+  background-color: #CFD8D7;
+}
+
+.botonesPar{
+  display: flex;
+  width: 100%;
+  margin-top: 9px;
+  
+}
+
+.iz1, .iz2{
+  padding: 2px;
+  margin: 5px;
+  height: 50px;
+
+}
+
+.der1, .der2{
+  padding: 2px;
+  margin: 5px;
+  height: 50px;
+}
+
+.iz1{
+  background-color: #CFD8D7;
+  color: black;
+}
+
+.iz2{
+  background-color: #453831;
+}
+
+.der1{
+  background-color: #000000;
+}
+
+.der2{
+  background-color: #C0091E;
+}
+
+
+
+
+
+
+/*#FAF2E7
+/*#E1EDEB
+/* Color Theme Swatches in Hex */
+.Pastel-2-1-hex { color: #7CABB2; }
+.Pastel-2-2-hex { color: #FFD7E9; }
+.Pastel-2-3-hex { color: #CBF7FF; }
+.Pastel-2-4-hex { color: #CCCBC4; }
+.Pastel-2-5-hex { color: #B2B2B2; }
+
+/* Color Theme Swatches in RGBA */
+.Pastel-2-1-rgba { color: rgba(124, 170, 177, 1); }
+.Pastel-2-2-rgba { color: rgba(255, 214, 232, 1); }
+.Pastel-2-3-rgba { color: rgba(202, 246, 255, 1); }
+.Pastel-2-4-rgba { color: rgba(204, 202, 195, 1); }
+.Pastel-2-5-rgba { color: rgba(177, 177, 177, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Pastel-2-1-hsla { color: hsla(187, 25, 59, 1); }
+.Pastel-2-2-hsla { color: hsla(333, 100, 92, 1); }
+.Pastel-2-3-hsla { color: hsla(189, 100, 89, 1); }
+.Pastel-2-4-hsla { color: hsla(52, 7, 78, 1); }
+.Pastel-2-5-hsla { color: hsla(0, 0, 69, 1); }
+
+
+
+/* Color Theme Swatches in Hex */
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-1-hex { color: #F2BBEF; }
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-2-hex { color: #F2DCF2; }
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-3-hex { color: #367FBF; }
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-4-hex { color: #55B3D9; }
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-5-hex { color: #F2D5C4; }
+
+/* Color Theme Swatches in RGBA */
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-1-rgba { color: rgba(242, 186, 238, 1); }
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-2-rgba { color: rgba(241, 220, 242, 1); }
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-3-rgba { color: rgba(53, 126, 191, 1); }
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-4-rgba { color: rgba(84, 179, 216, 1); }
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-5-rgba { color: rgba(242, 213, 196, 1); }
+
