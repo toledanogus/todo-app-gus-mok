@@ -32,9 +32,11 @@ export const getTarea = () => async (dispatch, getState) => {
     const state = getState();
     const tareaID = state.tarea.tareaID;
     const filtro = state.tarea.filtro;
+    const filtro2 = state.tarea.filtro2;
     const jsonFiltro = new Object();
     jsonFiltro['tareaID'] = tareaID;
     jsonFiltro['filter'] = filtro;
+    jsonFiltro['filter2'] = filtro2;
 
     const {data} = await tareaApi.post (`/getTareaID.php`, jsonFiltro);
     dispatch(setTarea({tarea: data}));

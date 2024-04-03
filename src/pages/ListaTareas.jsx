@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { getTareas } from "../store/slices/thunks";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setFiltro, setTareaID } from "../store/slices/tareaSlice";
+import { setFiltro2, setTareaID } from "../store/slices/tareaSlice";
 import etiquetaImage1 from "../assets/etiqueta1.png";
 import etiquetaImage2 from "../assets/etiqueta2.png";
 import etiquetaImage3 from "../assets/etiqueta3.png";
@@ -16,7 +16,7 @@ export const ListaTareas = () => {
   //Funciones*********************************************************
   const aDetalles = (id, filtro) => {
     dispatch(setTareaID(id));
-    dispatch(setFiltro(filtro));
+    dispatch(setFiltro2(filtro));
     navigate("/detalles");
   };
 
