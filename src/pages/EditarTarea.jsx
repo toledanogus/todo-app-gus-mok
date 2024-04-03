@@ -13,7 +13,9 @@ export const EditarTarea = () => {
   const [priority, setPriority] = useState("");
   const [fecha, setFecha] = useState("");
   const textareaRef = useRef(null);
-  const navigate= useNavigate();
+  const navigate = useNavigate();
+  const [firstTouch, setFirstTouch] = useState(true);
+  const [secondTouch, setSecondTouch] = useState(true);
 
   //Funciones***************************************************************
   const onHandleChangePriority = (event) => {
@@ -35,8 +37,8 @@ export const EditarTarea = () => {
         setTareaEditada({ tareaEditada: [title, description, priority, fecha] })
       );
       dispatch(editTarea());
-      alert('Se modificó exitosamente.');
-      navigate('/detalles');
+      alert("Se modificó exitosamente.");
+      navigate("/detalles");
     } else {
       alert("Ningún campo puede estar vacío");
     }
@@ -44,7 +46,7 @@ export const EditarTarea = () => {
 
   const aInicio = () => {
     navigate("/inicio");
-  }
+  };
 
   //Efectos***************************************************************
   useEffect(() => {
@@ -77,18 +79,30 @@ export const EditarTarea = () => {
       <h1>Editar Tarea</h1>
       <div className="contenedorcomplejo">
         {tarea &&
-          tarea.map((elemento, index) => (
-            <fieldset key={index}>
-              <legend>Tarea</legend>
-              <input
-                type="text"
-                value={title || elemento[0]}
-                onChange={onHandleChangeTitulo}
-                onClick={(event) => event.target.select()}
-              />
-            </fieldset>
-          ))}
-
+        tarea.map((elemento, index) => (
+          <fieldset key={index}>
+            <legend>Tarea</legend>
+            <input
+              type="text"
+              value={title !== null ? title : elemento[0] || ''}
+              onChange={onHandleChangeTitulo}
+              onTouchStart={(event) => {
+                if (firstTouch) {
+                  event.target.select();
+                  setFirstTouch(false);
+                  setSecondTouch(true);
+                } else {
+                  // Obtenemos la posición del toque
+                  const touchPosition = event.target.selectionStart;
+                  // Establecemos el foco en el input
+                  event.target.focus();
+                  // Establecemos la posición del cursor
+                  event.target.setSelectionRange(touchPosition, touchPosition);
+                }
+              }}
+            />
+          </fieldset>
+        ))}
         {tarea &&
           tarea.map((elemento, index) => (
             <fieldset key={index}>
@@ -96,9 +110,22 @@ export const EditarTarea = () => {
               <textarea
                 className="textareacompleja"
                 ref={textareaRef}
-                value={description || elemento[1]}
+                value={description != null ? description : elemento[1] || ""}
                 onChange={onHandleChangeDescription}
-                onClick={(event) => event.target.select()}
+                onTouchStart={(event) => {
+                  if (secondTouch) {
+                    event.target.select();
+                    setSecondTouch(false);
+                    setFirstTouch(true);
+                  } else {
+                    // Obtenemos la posición del toque
+                    const touchPosition = event.target.selectionStart;
+                    // Establecemos el foco en el input
+                    event.target.focus();
+                    // Establecemos la posición del cursor
+                    event.target.setSelectionRange(touchPosition, touchPosition);
+                  }
+                }}
                 style={{ overflow: "hidden", resize: "none", height: "auto" }}
               ></textarea>
             </fieldset>
@@ -136,7 +163,9 @@ export const EditarTarea = () => {
         <button className="registrar" onClick={enviarEditada}>
           Guardar Cambios
         </button>
-        <button onClick={aInicio} className="aInicio">Inicio</button>
+        <button onClick={aInicio} className="aInicio">
+          Inicio
+        </button>
       </div>
     </>
   );
