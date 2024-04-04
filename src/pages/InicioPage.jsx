@@ -24,8 +24,7 @@ import l20 from "../assets/iconos2/20.png";
 import l21 from "../assets/iconos2/21.png";
 import l22 from "../assets/iconos2/22.png";
 import l23 from "../assets/iconos2/23.png";
-
-
+import l24 from "../assets/iconos2/24.png";
 
 export const InicioPage = () => {
   //Constantes**********************************************
@@ -48,9 +47,7 @@ export const InicioPage = () => {
     <>
       <h1 className="tituloInicio">Gestión de Pendientes</h1>
 
-
       <div className="containerInicio">
-        
         <div
           className="todas"
           colSpan="4"
@@ -59,11 +56,11 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
-          <div className="icono"><img className="iconito" src={l7} alt="" /></div>
+          <div className="icono">
+            <img className="iconito" src={l7} alt="" />
+          </div>
           Todas
         </div>
-
-
 
         <div
           className="escuela"
@@ -73,7 +70,9 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
-          <div className="icono"><img className="iconito" src={l5} alt="" /></div>
+          <div className="icono">
+            <img className="iconito" src={l5} alt="" />
+          </div>
           Escuela
         </div>
         <div
@@ -84,7 +83,9 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
-          <div className="icono"><img className="iconito" src={l21} alt="" /></div>
+          <div className="icono">
+            <img className="iconito" src={l21} alt="" />
+          </div>
           Casa
         </div>
       </div>
@@ -98,7 +99,9 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
-          <div className="icono"><img className="iconito" src={l2} alt="" /></div>
+          <div className="icono">
+            <img className="iconito" src={l2} alt="" />
+          </div>
           Personal
         </div>
 
@@ -109,7 +112,9 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
-          <div className="icono"><img className="iconito" src={l20} alt="" /></div>
+          <div className="icono">
+            <img className="iconito" src={l20} alt="" />
+          </div>
           Salud
         </div>
         <div
@@ -119,12 +124,38 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
-          <div className="icono"><img className="iconito" src={l11} alt="" /></div>
+          <div className="icono">
+            <img className="iconito" src={l11} alt="" />
+          </div>
           Diversión
         </div>
       </div>
       {/* linea siguiente *************************************/}
       <div className="containerInicio">
+      <div
+          className="alumnos"
+          onClick={() => {
+            const nuevoFiltro = "alumnos";
+            aListaDeTareas(nuevoFiltro);
+          }}
+        >
+          <div className="icono">
+            <img className="iconito" src={l14} alt="" />
+          </div>
+          Alumnos
+        </div>
+        <div
+          className="padres"
+          onClick={() => {
+            const nuevoFiltro = "padres";
+            aListaDeTareas(nuevoFiltro);
+          }}
+        >
+          <div className="icono">
+            <img className="iconito" src={l24} alt="" />
+          </div>
+          Padres
+        </div>
         <div
           className="juntos"
           onClick={() => {
@@ -132,12 +163,16 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
-          <div className="icono"><img className="iconito" src={l23} alt="" /></div>
+          <div className="icono">
+            <img className="iconito" src={l23} alt="" />
+          </div>
           YG
         </div>
       </div>
       <div className="containerInicio">
-        <button className="nuevaTarea" onClick={aNuevaTarea}>Nueva Tarea</button>
+        <button className="nuevaTarea" onClick={aNuevaTarea}>
+          Nueva Tarea
+        </button>
       </div>
     </>
   );

@@ -91,6 +91,8 @@ export const NuevaTareaPage = () => {
                 <option value="personal">Personal</option>
                 <option value="salud">Salud</option>
                 <option value="diversion">Diversión</option>
+                <option value="alumnos">Alumnos</option>
+                <option value="padres">Padres</option>
                 <option value="juntos">Juntos</option>
               </select>
             </li>
