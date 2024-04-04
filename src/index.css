@@ -276,6 +276,51 @@ table{
   background-color: #C0091E;
 }
 
+.circulo-rojo{
+  
+    width: 20px; /* Ancho del círculo */
+    height: 20px; /* Altura del círculo */
+    background-color: red; /* Color del círculo */
+    border-radius: 50%; /* Para que sea un círculo */
+    position: fixed; /* Para fijar el círculo */
+    top: 20px; /* Ajusta la distancia desde arriba */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    z-index: 9999; /* Para que esté por encima de otros elementos */
+    animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+  0% {
+      opacity: 1; /* Visible */
+  }
+  50% {
+      opacity: 0; /* Invisible */
+  }
+  100% {
+      opacity: 1; /* Visible */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

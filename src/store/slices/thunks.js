@@ -1,6 +1,6 @@
 import { tareaApi } from '../../api/tareaApi';
 import {store} from '../store';
-import { setTareas, setTarea } from './tareaSlice';
+import { setTareas, setTarea, setNotificacion } from './tareaSlice';
 
 export const registrarEnBase = () => async (dispatch, getState) => {
     const state = getState();
@@ -83,4 +83,10 @@ export const sendSolved = () => async (dispatch, getState) => {
     jsonSolved['filter'] = filtro;
     const {data} = await tareaApi.post (`/enviarResueltas.php`, jsonSolved);
     
+};
+
+export const getNotificacion = () => async (dispatch, getState) => {
+    const { data } = await tareaApi.get(`/notificacion.php`);
+   
+        dispatch(setNotificacion({ notificacion: data }));
 };

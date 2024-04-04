@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setFiltro } from "../store/slices/tareaSlice";
 import { useNavigate } from "react-router-dom";
 import l1 from "../assets/iconos2/1.png";
@@ -25,11 +25,16 @@ import l21 from "../assets/iconos2/21.png";
 import l22 from "../assets/iconos2/22.png";
 import l23 from "../assets/iconos2/23.png";
 import l24 from "../assets/iconos2/24.png";
+import { useEffect } from "react";
+import { getNotificacion } from "../store/slices/thunks";
+
+
 
 export const InicioPage = () => {
   //Constantes**********************************************
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const {notificacion} = useSelector ((state)=>state.tarea)
 
   //Funciones***********************************************
   const aNuevaTarea = () => {
@@ -42,6 +47,10 @@ export const InicioPage = () => {
   };
 
   //Efectos*************************************************
+useEffect(() => {
+  dispatch(getNotificacion());
+}, [])
+
 
   return (
     <>
@@ -174,6 +183,11 @@ export const InicioPage = () => {
           Nueva Tarea
         </button>
       </div>
+      <div>{notificacion && 
+      notificacion[0][0] === 1 ? <div className="circulo-rojo"></div>
+      : null
+      }</div>
+
     </>
   );
 };

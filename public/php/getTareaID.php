@@ -8,8 +8,10 @@ $x = json_decode($json_data);
 
 if ($x->filter === 'juntos') {
     $respuesta = mysqli_query($conn, "SELECT titulo, descripcion, prioridad, completada, fechalimite, categoria, id FROM tareasjuntos WHERE id = '".$x->tareaID."'");
+    mysqli_query($conn, "UPDATE tareasjuntos SET notificacion = 0 WHERE id = '".$x->tareaID."'");
 }elseif($x->filter === 'todas' && $x->filter2 === 'juntos'){
     $respuesta = mysqli_query($conn, "SELECT titulo, descripcion, prioridad, completada, fechalimite, categoria, id FROM tareasjuntos WHERE id = '".$x->tareaID."'");
+    mysqli_query($conn, "UPDATE tareasjuntos SET notificacion = 0 WHERE id = '".$x->tareaID."'");
 }else{
     $respuesta = mysqli_query($conn, "SELECT titulo, descripcion, prioridad, completada, fechalimite, categoria, id FROM tareasgus WHERE id = '".$x->tareaID."'");
 }
