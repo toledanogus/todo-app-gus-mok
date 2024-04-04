@@ -8,7 +8,7 @@ $x = json_decode($json_data);
 
 if ($x->filter === 'todas') {
     /* $respuesta = mysqli_query($conn, "SELECT titulo, descripcion, prioridad, completada, fechalimite, categoria, id FROM tareasgus ORDER BY prioridad DESC"); */
-    $respuesta = mysqli_query($conn, "(SELECT titulo, descripcion, prioridad, completada, fechalimite, categoria, id FROM tareasgus) UNION ALL (SELECT titulo, descripcion, prioridad, completada, fechalimite, categoria, id FROM tareasjuntos) ORDER BY prioridad DESC");
+    $respuesta = mysqli_query($conn, "(SELECT titulo, descripcion, prioridad, completada, fechalimite, categoria, id FROM tareasgus) UNION ALL (SELECT titulo, descripcion, prioridad, completada, fechalimite, categoria, id FROM tareasjuntos) ORDER BY fechalimite ASC, prioridad DESC");
 }elseif ($x->filter === 'juntos'){
     $respuesta = mysqli_query($conn, "SELECT titulo, descripcion, prioridad, completada, fechalimite, categoria, id FROM tareasjuntos WHERE categoria = '".$x->filter."'");
 }else{
