@@ -12,6 +12,7 @@ dist
 tareasgus
 dist-ssr
 *.local
+tareasgus.zip
 
 # Editor directories and files
 .vscode/*
@@ -24,4 +25,4 @@ dist-ssr
 *.sln
 *.sw?
 *.zip
-
+tareasgus.zip
