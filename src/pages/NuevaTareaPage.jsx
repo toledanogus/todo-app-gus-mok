@@ -121,10 +121,10 @@ export const NuevaTareaPage = () => {
       </div>
       {/* <p>Categoría: {selection}</p>
       <p>Prioridad: {selection2}</p>
-      
+      <p>Fecha: {selection3}</p>
       <p>Título: {title}</p>
       <p>Descripción: {description}</p>
-      <p>Nueva tarea: {nuevaTarea}</p> */}<p>Fecha: {selection3}</p>
+      <p>Nueva tarea: {nuevaTarea}</p> */}
     </>
   );
 };
