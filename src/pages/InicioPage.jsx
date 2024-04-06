@@ -26,7 +26,7 @@ import l22 from "../assets/iconos2/22.png";
 import l23 from "../assets/iconos2/23.png";
 import l24 from "../assets/iconos2/24.png";
 import { useEffect } from "react";
-import { getNotificacion } from "../store/slices/thunks";
+import { getNotificacion, getTareas } from "../store/slices/thunks";
 
 export const InicioPage = () => {
   //Constantes**********************************************
@@ -45,7 +45,8 @@ export const InicioPage = () => {
   };
 
   const aCalendario = () => {
-    dispatch(setFiltro("todas"));
+    dispatch(setFiltro('todas'));
+    dispatch(getTareas());
     navigate("/calendario");
   };
 
@@ -190,8 +191,8 @@ export const InicioPage = () => {
           <div className="circulo-rojo"></div>
         ) : null}
       </div>
-      <div className="containerx">
-        <button onClick={aCalendario} className="aInicio">
+      <div className="contenedorx">
+        <button onClick={aCalendario} className="gusPersonal">
           Calendario General
         </button>
       </div>
