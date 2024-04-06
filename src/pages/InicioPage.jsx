@@ -46,6 +46,8 @@ export const InicioPage = () => {
     navigate("/lista");
   };
 
+  
+
   //Efectos*************************************************
 useEffect(() => {
   dispatch(getNotificacion());

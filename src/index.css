@@ -64,14 +64,14 @@ div.escuela, div.familia, div.personal, div.diversion {
 }
 
 button{
-  width: 100%;
+  /* width: 100%; */
   background-color: #C0091E;
   border-radius: 10px;
   padding: 10px;
   border: 3px solid #3e3e3e;
   font-size: medium;
   color: #fffaf8;
-  width: 77%;
+  /* width: 77%; */
 }
 
 .lista-tareas ul {
@@ -110,7 +110,13 @@ td {
 
 .tituloTarea{
   text-align: left;
+  max-width: 200px; /* Ancho máximo de la columna Nombre */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) si el texto no cabe */
+  white-space: wrap; 
 }
+
+
 
 button.registrar{
   background-color:#453831;
@@ -250,6 +256,7 @@ table{
   padding: 2px;
   margin: 5px;
   height: 50px;
+  width: 77%;
 
 }
 
@@ -257,6 +264,8 @@ table{
   padding: 2px;
   margin: 5px;
   height: 50px;
+  width: 77%;
+
 }
 
 .iz1{
@@ -274,6 +283,13 @@ table{
 
 .der2{
   background-color: #C0091E;
+}
+
+.containerCalendar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .circulo-rojo{
@@ -301,9 +317,50 @@ table{
   }
 }
 
+.rbc-event-content{
+  font-size:xx-small;
+
+}
+
+.custom-sunday-cell {
+  background-color: rgb(250, 220, 220);
+}
+.custom-saturday-cell {
+  background-color: rgb(237, 217, 190);
+}
+
+.calendarioLink{
+  margin-top:10px;
+  width: 77%;
+  background-color: #453831;
+}
 
 
+.rbc-toolbar button:active, .rbc-toolbar button.rbc-active{
+  background-color: #453831 !important;
+  color: white !important;
+  border-color: #453831 !important;
+}
+.rbc-toolbar button{
+  background-color: #CFD8D7 !important;
+  border-color: #453831 !important;
+}
 
+.rbc-month-view{
+  border: 1px solid #453831 !important;
+  background-color:#ffffff;
+}
+
+.rbc-day-bg+.rbc-day-bg, .rbc-month-row+.rbc-month-row, .rbc-header+.rbc-header, .rbc-header{
+  border-color: #453831 !important;
+}
+.rbc-header{
+  background-color: #CFD8D7 !important;
+}
+
+.react-datepicker-popper{
+  position: relative; left: 10px; right: -39px; top: 0px !important;
+}
 
 
 

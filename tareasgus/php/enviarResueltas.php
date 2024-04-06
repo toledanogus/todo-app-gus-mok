@@ -4,7 +4,7 @@ require 'conection.php';
 $json_data = file_get_contents("php://input");
 $x = json_decode($json_data);
 
-if ($x->filter === 'juntos') {
+if ($x->filter === 'todas' && $x->filter2 === 'juntos' || $x->filter === 'juntos') {
     if ($x && isset($x->solved) && is_array($x->solved)) {
         foreach ($x->solved as $concepto) {
             // Realiza la consulta SQL para actualizar el campo pagado a 1 para el concepto específico

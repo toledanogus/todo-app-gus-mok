@@ -6,6 +6,8 @@ import { setFiltro2, setTareaID } from "../store/slices/tareaSlice";
 import etiquetaImage1 from "../assets/etiqueta1.png";
 import etiquetaImage2 from "../assets/etiqueta2.png";
 import etiquetaImage3 from "../assets/etiqueta3.png";
+import { es } from "date-fns/locale";
+import { format } from "date-fns";
 
 export const ListaTareas = () => {
   //constantes********************************************************
@@ -24,6 +26,14 @@ export const ListaTareas = () => {
     navigate("/inicio");
   };
 
+  const aCalendario = () => {
+    navigate("/calendario");
+  };
+
+  const formatearFecha = (fechaOriginal) => {
+    return format(new Date(fechaOriginal), "dd-MMM", { locale: es });
+  };
+
   //Efectos***********************************************************
   useEffect(() => {
     dispatch(getTareas());
@@ -38,7 +48,8 @@ export const ListaTareas = () => {
           <thead>
             {/* <th className="vacio"></th> */}
             <th colSpan="2">Tarea</th>
-            <th>Completada</th>
+            <th>Inicio</th>
+            <th>Fin</th>
           </thead>
 
           <tbody>
@@ -65,27 +76,23 @@ export const ListaTareas = () => {
                     <td
                       className="tituloTarea"
                       id={`completa${elemento[3]}`}
-                      onClick={() => aDetalles(elemento[6],elemento[5])}
+                      onClick={() => aDetalles(elemento[7], elemento[6])}
                     >
                       {elemento[0]}
                     </td>
-                    <td className="centrado">
-                      {elemento[3] ? (
-                        <span className="arrow">✓</span>
-                      ) : (
-                        <span className="equis">x</span>
-                      )}
-                    </td>
+                    <td className="centrado">{formatearFecha(elemento[4])}</td>
+                    <td className="centrado">{formatearFecha(elemento[5])}</td>
                   </tr>
                 );
               })}
           </tbody>
         </table>
         <div className="contenedorx">
-          <button className="aInicio" onClick={aInicio}>
-            Inicio
-          </button>
+          <button className="calendarioLink" onClick={aCalendario}>Calendario</button>
         </div>
+        <button className="aInicio" onClick={aInicio}>
+          Inicio
+        </button>
       </div>
     </>
   );

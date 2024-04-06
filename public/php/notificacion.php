@@ -1,7 +1,7 @@
 <?php
 require 'conection.php';
    
-$respuesta = mysqli_query($conn, "SELECT notificacion FROM tareasjuntos WHERE notificacion = 1 LIMIT 1");
+$respuesta = mysqli_query($conn, "SELECT notificaciongus FROM tareasjuntos WHERE notificaciongus = 1 LIMIT 1");
 
 if (!$respuesta || mysqli_num_rows($respuesta) == 0) {
     $row = 0;

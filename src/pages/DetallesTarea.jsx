@@ -7,6 +7,10 @@ import { useNavigate } from "react-router-dom";
 import label1 from "../assets/etiqueta1.png";
 import label2 from "../assets/etiqueta2.png";
 import label3 from "../assets/etiqueta3.png";
+import { es } from 'date-fns/locale';
+import { format } from "date-fns";
+/* import {utcToZonedTime} from 'date-fns-tz'; */
+
 
 export const DetallesTarea = () => {
   //Constantes**********************************************************
@@ -98,6 +102,29 @@ export const DetallesTarea = () => {
     navigate("/inicio");
   };
 
+  /* const formatearFecha = (fechaOriginal) => {
+    const fecha = new Date(fechaOriginal);
+    const optionsFecha = {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    };
+    // Opciones para el formato de la hora
+    const optionsHora = { hour: "numeric", minute: "numeric", hour12: true };
+
+    // Obtén la fecha y hora formateada
+    const fechaFormateada = fecha.toLocaleDateString("es-ES", optionsFecha);
+    const horaFormateada = fecha.toLocaleTimeString("es-ES", optionsHora);
+
+    // Combinar la fecha y la hora formateadas
+    return `${fechaFormateada}, ${horaFormateada}`;
+  }; */
+
+  const formatearFecha = (fechaOriginal) => {
+    return format(new Date(fechaOriginal), "EEEE d 'de' MMMM 'de' yyyy h:mm a", { locale: es });
+  }
+
   //Efectos*************************************************************
   useEffect(() => {
     dispatch(getTarea());
@@ -160,8 +187,18 @@ export const DetallesTarea = () => {
                 )}
               </fieldset>
               <fieldset>
-                <legend>Fecha límite</legend>
-                {formatDate(elemento[4])}
+                <legend>Fecha De Inicio</legend>
+                {formatearFecha(elemento[7])}
+                {/* {new Date(elemento[7]).toLocaleString("es-ES", {
+                  timeZone: "UTC",
+                })} */}
+              </fieldset>
+              <fieldset>
+                <legend>Fecha Límite</legend>
+                {formatearFecha(elemento[4])}
+                {/* {new Date(elemento[4]).toLocaleString("es-ES", {
+                  timeZone: "-06:00",
+                })} */}
               </fieldset>
               <fieldset className="uper">
                 <legend>Categoría</legend>

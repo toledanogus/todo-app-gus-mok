@@ -4,7 +4,8 @@ require 'conection.php';
 $json_data = file_get_contents("php://input");
 $x = json_decode($json_data);
 
-if ($x->filter === 'juntos') {
+if ($x->filter === 'todas' && $x->filter2 === 'juntos' || $x->filter === 'juntos') {
+    
    $respuesta = mysqli_query($conn, "DELETE FROM tareasjuntos WHERE id = '".$x->tareaID."'");
 
 if ($respuesta) {
