@@ -28,13 +28,11 @@ import l24 from "../assets/iconos2/24.png";
 import { useEffect } from "react";
 import { getNotificacion } from "../store/slices/thunks";
 
-
-
 export const InicioPage = () => {
   //Constantes**********************************************
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const {notificacion} = useSelector ((state)=>state.tarea)
+  const { notificacion } = useSelector((state) => state.tarea);
 
   //Funciones***********************************************
   const aNuevaTarea = () => {
@@ -46,13 +44,15 @@ export const InicioPage = () => {
     navigate("/lista");
   };
 
-  
+  const aCalendario = () => {
+    dispatch(setFiltro("todas"));
+    navigate("/calendario");
+  };
 
   //Efectos*************************************************
-useEffect(() => {
-  dispatch(getNotificacion());
-}, [])
-
+  useEffect(() => {
+    dispatch(getNotificacion());
+  }, []);
 
   return (
     <>
@@ -143,7 +143,7 @@ useEffect(() => {
       </div>
       {/* linea siguiente *************************************/}
       <div className="containerInicio">
-      <div
+        <div
           className="alumnos"
           onClick={() => {
             const nuevoFiltro = "alumnos";
@@ -185,11 +185,16 @@ useEffect(() => {
           Nueva Tarea
         </button>
       </div>
-      <div>{notificacion && 
-      notificacion[0][0] === 1 ? <div className="circulo-rojo"></div>
-      : null
-      }</div>
-
+      <div>
+        {notificacion && notificacion[0][0] === 1 ? (
+          <div className="circulo-rojo"></div>
+        ) : null}
+      </div>
+      <div className="containerx">
+        <button onClick={aCalendario} className="aInicio">
+          Calendario General
+        </button>
+      </div>
     </>
   );
 };
