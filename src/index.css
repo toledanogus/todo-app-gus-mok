@@ -362,7 +362,9 @@ table{
   position: relative; left: 10px; right: -39px; top: 0px !important;
 }
 
-
+.centrado{
+  text-align: center;
+}
 
 
 

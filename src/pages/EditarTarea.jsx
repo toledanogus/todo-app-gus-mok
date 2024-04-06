@@ -185,7 +185,7 @@ export const EditarTarea = () => {
 
         {tarea &&
           tarea.map((elemento, index) => (
-            <fieldset key={index}>
+            <fieldset className="centrado" key={index}>
               <legend>Fecha de Inicio</legend>
               <DatePicker
                 selected={fechaMostrar1}
@@ -213,7 +213,7 @@ export const EditarTarea = () => {
 
         {tarea &&
           tarea.map((elemento, index) => (
-            <fieldset key={index}>
+            <fieldset className="centrado" key={index}>
               <legend>Fecha Límite</legend>
               <DatePicker
                 minDate={fechaInicio}

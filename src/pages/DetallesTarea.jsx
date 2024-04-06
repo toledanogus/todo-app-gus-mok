@@ -121,9 +121,17 @@ export const DetallesTarea = () => {
     return `${fechaFormateada}, ${horaFormateada}`;
   }; */
 
-  const formatearFecha = (fechaOriginal) => {
+  /* const formatearFecha = (fechaOriginal) => {
     return format(new Date(fechaOriginal), "EEEE d 'de' MMMM 'de' yyyy h:mm a", { locale: es });
-  }
+  } */
+  const formatearFecha = (fechaOriginal) => {
+    const fecha = new Date(fechaOriginal);
+    const fechaFormateada = format(fecha, "EEEE d 'de' MMMM 'de' yyyy", { locale: es });
+    const horaFormateada = format(fecha, "h:mm a", { locale: es });
+  
+    return [<div key="fecha">{fechaFormateada}</div>, <div key="hora">{horaFormateada}</div>];
+}
+  
 
   //Efectos*************************************************************
   useEffect(() => {
