@@ -1,71 +1,78 @@
 @font-face {
-  font-family: 'Gus';
-  src: local('Gus'), url('./assets/AvenirNextLTPro-Regular.otf');
+  font-family: "Gus";
+  src: local("Gus"), url("./assets/AvenirNextLTPro-Regular.otf");
 }
 
 @font-face {
-  font-family: 'Gus2';
-  src: local('Gus2'), url('./assets/VIVALDII.TTF');
+  font-family: "Gus2";
+  src: local("Gus2"), url("./assets/VIVALDII.TTF");
 }
 
-body{
-  background-color:#F3F3EB;
+body {
+  background-color: #f3f3eb;
   display: flex;
-  font-family: 'Gus';
+  font-family: "Gus";
   justify-content: center;
 }
 
-h1{
+h1 {
   color: #453831;
-  font-family: 'Gus2';
+  font-family: "Gus2";
   padding-left: 40px;
   padding-right: 40px;
   text-align: center;
   font-size: 250%;
 }
 
-div.containerInicio{
+div.containerInicio {
   display: flex;
   justify-content: center;
-  
 }
 
-
- div.todas, div.casa, div.tesis, div.juntos, div.salud, div.alumnos, div.padres{
-  background-color: #CFD8D7;
-  height:120px;
+div.todas,
+div.casa,
+div.tesis,
+div.juntos,
+div.salud,
+div.alumnos,
+div.padres {
+  background-color: #cfd8d7;
+  height: 120px;
   width: 33%;
   border-radius: 20px;
   margin: 10px;
   display: flex;
-  justify-content: center;  
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   border: 3px solid #9e9e9e;
-  font-family: 'Gus';
+  font-family: "Gus";
   flex-direction: column;
 }
 
-div.escuela, div.familia, div.personal, div.diversion {
-  background-color: #CFD8D7;
-  height:120px;
+div.escuela,
+div.familia,
+div.personal,
+div.diversion {
+  background-color: #cfd8d7;
+  height: 120px;
   width: 33%;
   border-radius: 20px;
   margin: 10px;
   display: flex;
-  justify-content: center;  
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   border: 3px solid #9e9e9e;
-  font-family: 'Gus';
+  font-family: "Gus";
   flex-direction: column;
 }
 
-.icono{
+.icono {
   text-align: center;
 }
 
-button{
+button {
   /* width: 100%; */
-  background-color: #C0091E;
+  background-color: #c0091e;
   border-radius: 10px;
   padding: 10px;
   border: 3px solid #3e3e3e;
@@ -96,7 +103,7 @@ button{
   flex-basis: 50%; /* Ajusta este valor según necesites */
 }
 
-.lista-tareas{
+.lista-tareas {
   width: 77%;
   justify-content: center;
   align-items: center;
@@ -108,61 +115,71 @@ td {
   padding: 5px;
 }
 
-.tituloTarea{
+.tituloTarea {
   text-align: left;
   max-width: 200px; /* Ancho máximo de la columna Nombre */
   overflow: hidden;
   text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) si el texto no cabe */
-  white-space: wrap; 
+  white-space: wrap;
 }
 
+.activo{
+  text-align: left;
+  max-width: 200px; /* Ancho máximo de la columna Nombre */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) si el texto no cabe */
+  white-space: wrap;
+  font-weight: bolder;
+  /* background-color: #ffdddd; */
+  border-radius: 8px;
+  border: 1px solid #453831;
+}
 
-
-button.registrar{
-  background-color:#453831;
+button.registrar {
+  background-color: #453831;
   color: #ffffff;
   margin-top: 10px;
   width: 77%;
 }
 
-button.aInicio{
-  background-color: #C0091E;
+button.aInicio {
+  background-color: #c0091e;
   color: #ffffff;
   margin-top: 10px;
   margin-bottom: 10px;
   width: 77%;
 }
 
-.arrow{
-  color:#274001;
+.arrow {
+  color: #274001;
   font-weight: bolder;
 }
 
-.equis{
-  color:#8D5ABF;
+.equis {
+  color: #8d5abf;
   font-weight: bolder;
 }
 
-.categoria{
-  text-transform:capitalize;
-  text-align:left;
+.categoria {
+  text-transform: capitalize;
+  text-align: left;
 }
 
-th{
-  background-color:#453831;
+th {
+  background-color: #453831;
   border-radius: 8px;
   /* border: 3px solid #DEDEDD; */
   padding: 5px;
   color: #f0f0f0;
 }
 
-legend{
-  font-weight:bold;
+legend {
+  font-weight: bold;
   /* background-color: #ffffff; */
   /* border-radius: 4px;
   color: #000000;
   border: 2px solid #767676; */
-  padding:4px;
+  padding: 4px;
 }
 
 img {
@@ -170,35 +187,36 @@ img {
   width: 18px;
 }
 
-.iconito{
+.iconito {
   width: 40px;
 }
-.vacio{
-  background-color:#dededd00;
+.vacio {
+  background-color: #dededd00;
   border: none;
 }
 
-.uper{
+.uper {
   text-transform: capitalize;
 }
 
-fieldset{
+fieldset {
   background-color: #e1eeed;
   /* background-color:#CFD8D7; */
   width: 70%;
   margin-top: 10px;
 }
 
-#completa1, .completa1{
+#completa1,
+.completa1 {
   text-decoration: line-through;
 }
 
-.completada{
-  color:#367FBF;
+.completada {
+  color: #367fbf;
   font-weight: bolder;
 }
 
-h2{
+h2 {
   text-align: center;
 }
 
@@ -209,7 +227,7 @@ h2{
   width: 100%; /* Expande al 100% del ancho disponible */
 }
 
-.contenedorx{
+.contenedorx {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,114 +235,110 @@ h2{
   min-width: 350px;
 }
 
-.contenedorcomplejo{
+.contenedorcomplejo {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 400px;
-
 }
-.nuevaTarea{
+.nuevaTarea {
   justify-content: center;
   width: 100%;
   margin-top: 10px;
 }
 
-.textareacompleja{
+.textareacompleja {
   width: 97%;
 }
 
-.tituloInicio{
+.tituloInicio {
   padding-left: 3px;
   padding-right: 3px;
 }
 
-table{
+table {
   border: 3px solid #353535;
   border-radius: 4px;
   background-color: #ffffff;
 }
 
-.botonesPar{
+.botonesPar {
   display: flex;
   width: 100%;
   margin-top: 9px;
-  
 }
 
-.iz1, .iz2{
+.iz1,
+.iz2 {
   padding: 2px;
   margin: 5px;
   height: 50px;
   width: 77%;
-
 }
 
-.der1, .der2{
+.der1,
+.der2 {
   padding: 2px;
   margin: 5px;
   height: 50px;
   width: 77%;
-
 }
 
-.iz1{
-  background-color: #CFD8D7;
+.iz1 {
+  background-color: #cfd8d7;
   color: black;
 }
 
-.iz2{
+.iz2 {
   background-color: #453831;
 }
 
-.der1{
+.der1 {
   background-color: #000000;
 }
 
-.der2{
-  background-color: #C0091E;
+.der2 {
+  background-color: #c0091e;
 }
 
-.containerCalendar{
+.containerCalendar {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
 }
 
-.circulo-rojo{
-  
-    width: 20px; /* Ancho del círculo */
-    height: 20px; /* Altura del círculo */
-    background-color: red; /* Color del círculo */
-    border-radius: 50%; /* Para que sea un círculo */
-    position: fixed; /* Para fijar el círculo */
-    top: 20px; /* Ajusta la distancia desde arriba */
-    right: 20px; /* Ajusta la distancia desde la derecha */
-    z-index: 9999; /* Para que esté por encima de otros elementos */
-    animation: blink-animation 1s infinite;
+.circulo-rojo {
+  width: 20px; /* Ancho del círculo */
+  height: 20px; /* Altura del círculo */
+  background-color: red; /* Color del círculo */
+  border-radius: 50%; /* Para que sea un círculo */
+  position: fixed; /* Para fijar el círculo */
+  top: 20px; /* Ajusta la distancia desde arriba */
+  right: 20px; /* Ajusta la distancia desde la derecha */
+  z-index: 9999; /* Para que esté por encima de otros elementos */
+  animation: blink-animation 1s infinite;
 }
 
 @keyframes blink-animation {
   0% {
-      opacity: 1; /* Visible */
+    opacity: 1; /* Visible */
   }
   50% {
-      opacity: 0; /* Invisible */
+    opacity: 0; /* Invisible */
   }
   100% {
-      opacity: 1; /* Visible */
+    opacity: 1; /* Visible */
   }
 }
 
-.circuloCounter{
+.circuloCounter {
   width: 23px; /* Ancho del círculo */
   height: 21px; /* Altura del círculo */
   background-color: #453831; /* Color del círculo */
   border-radius: 50%; /* Para fijar el círculo */
   z-index: 9999; /* Para que esté por encima de otros elementos */
-  animation: blink-a
-  nimation2 10s infinite;
+  animation: blink-a nimation2 10s infinite;
   text-align: center;
   padding-top: 4px;
   align-self: flex-end;
@@ -338,22 +352,21 @@ table{
 
 @keyframes blink-animation2 {
   0% {
-      opacity: 1;
-      background-color: #a1081a; /* Visible */
+    opacity: 1;
+    background-color: #a1081a; /* Visible */
   }
   50% {
-      opacity: .9; 
-      background-color: #C0091E;/* Invisible */
+    opacity: 0.9;
+    background-color: #c0091e; /* Invisible */
   }
   100% {
-      opacity: 1;
-      background-color: #a50c1e; /* Visible */
+    opacity: 1;
+    background-color: #a50c1e; /* Visible */
   }
 }
 
-.rbc-event-content{
-  font-size:xx-small;
-
+.rbc-event-content {
+  font-size: xx-small;
 }
 
 .custom-sunday-cell {
@@ -363,50 +376,56 @@ table{
   background-color: rgb(237, 217, 190);
 }
 
-.calendarioLink{
-  margin-top:10px;
+.calendarioLink {
+  margin-top: 10px;
   width: 77%;
   background-color: #453831;
 }
 
-
-.rbc-toolbar button:active, .rbc-toolbar button.rbc-active{
+.rbc-toolbar button:active,
+.rbc-toolbar button.rbc-active {
   background-color: #453831 !important;
   color: white !important;
   border-color: #453831 !important;
 }
-.rbc-toolbar button{
-  background-color: #CFD8D7 !important;
+.rbc-toolbar button {
+  background-color: #cfd8d7 !important;
   border-color: #453831 !important;
 }
 
-.rbc-month-view{
+.rbc-month-view {
   border: 1px solid #453831 !important;
-  background-color:#ffffff;
+  background-color: #ffffff;
 }
 
-.rbc-day-bg+.rbc-day-bg, .rbc-month-row+.rbc-month-row, .rbc-header+.rbc-header, .rbc-header{
+.rbc-day-bg + .rbc-day-bg,
+.rbc-month-row + .rbc-month-row,
+.rbc-header + .rbc-header,
+.rbc-header {
   border-color: #453831 !important;
 }
-.rbc-header{
-  background-color: #CFD8D7 !important;
+.rbc-header {
+  background-color: #cfd8d7 !important;
 }
 
-.react-datepicker-popper{
-  position: relative; left: 10px; right: -39px; top: 0px !important;
+.react-datepicker-popper {
+  position: relative;
+  left: 10px;
+  right: -39px;
+  top: 0px !important;
 }
 
-.centrado{
+.centrado {
   text-align: center;
 }
 
-.gusPersonal{
-  background-color:#453831;
+.gusPersonal {
+  background-color: #453831;
   width: 77%;
   margin-top: 10px;
 }
 
-.circulo-hoy{
+.circulo-hoy {
   width: 23px; /* Ancho del círculo */
   height: 21px; /* Altura del círculo */
   background-color: #453831; /* Color del círculo */
@@ -419,59 +438,99 @@ table{
   border: 2px solid #ffffff;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*#FAF2E7
 /*#E1EDEB
 /* Color Theme Swatches in Hex */
-.Pastel-2-1-hex { color: #7CABB2; }
-.Pastel-2-2-hex { color: #FFD7E9; }
-.Pastel-2-3-hex { color: #CBF7FF; }
-.Pastel-2-4-hex { color: #CCCBC4; }
-.Pastel-2-5-hex { color: #B2B2B2; }
+.Pastel-2-1-hex {
+  color: #7cabb2;
+}
+.Pastel-2-2-hex {
+  color: #ffd7e9;
+}
+.Pastel-2-3-hex {
+  color: #cbf7ff;
+}
+.Pastel-2-4-hex {
+  color: #cccbc4;
+}
+.Pastel-2-5-hex {
+  color: #b2b2b2;
+}
 
 /* Color Theme Swatches in RGBA */
-.Pastel-2-1-rgba { color: rgba(124, 170, 177, 1); }
-.Pastel-2-2-rgba { color: rgba(255, 214, 232, 1); }
-.Pastel-2-3-rgba { color: rgba(202, 246, 255, 1); }
-.Pastel-2-4-rgba { color: rgba(204, 202, 195, 1); }
-.Pastel-2-5-rgba { color: rgba(177, 177, 177, 1); }
+.Pastel-2-1-rgba {
+  color: rgba(124, 170, 177, 1);
+}
+.Pastel-2-2-rgba {
+  color: rgba(255, 214, 232, 1);
+}
+.Pastel-2-3-rgba {
+  color: rgba(202, 246, 255, 1);
+}
+.Pastel-2-4-rgba {
+  color: rgba(204, 202, 195, 1);
+}
+.Pastel-2-5-rgba {
+  color: rgba(177, 177, 177, 1);
+}
 
 /* Color Theme Swatches in HSLA */
-.Pastel-2-1-hsla { color: hsla(187, 25, 59, 1); }
-.Pastel-2-2-hsla { color: hsla(333, 100, 92, 1); }
-.Pastel-2-3-hsla { color: hsla(189, 100, 89, 1); }
-.Pastel-2-4-hsla { color: hsla(52, 7, 78, 1); }
-.Pastel-2-5-hsla { color: hsla(0, 0, 69, 1); }
-
-
+.Pastel-2-1-hsla {
+  color: hsla(187, 25, 59, 1);
+}
+.Pastel-2-2-hsla {
+  color: hsla(333, 100, 92, 1);
+}
+.Pastel-2-3-hsla {
+  color: hsla(189, 100, 89, 1);
+}
+.Pastel-2-4-hsla {
+  color: hsla(52, 7, 78, 1);
+}
+.Pastel-2-5-hsla {
+  color: hsla(0, 0, 69, 1);
+}
 
 /* Color Theme Swatches in Hex */
-.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-1-hex { color: #F2BBEF; }
-.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-2-hex { color: #F2DCF2; }
-.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-3-hex { color: #367FBF; }
-.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-4-hex { color: #55B3D9; }
-.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-5-hex { color: #F2D5C4; }
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,
+-pastel-colors-1-hex {
+  color: #f2bbef;
+}
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,
+-pastel-colors-2-hex {
+  color: #f2dcf2;
+}
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,
+-pastel-colors-3-hex {
+  color: #367fbf;
+}
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,
+-pastel-colors-4-hex {
+  color: #55b3d9;
+}
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,
+-pastel-colors-5-hex {
+  color: #f2d5c4;
+}
 
 /* Color Theme Swatches in RGBA */
-.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-1-rgba { color: rgba(242, 186, 238, 1); }
-.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-2-rgba { color: rgba(241, 220, 242, 1); }
-.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-3-rgba { color: rgba(53, 126, 191, 1); }
-.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-4-rgba { color: rgba(84, 179, 216, 1); }
-.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,-pastel-colors-5-rgba { color: rgba(242, 213, 196, 1); }
-
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,
+-pastel-colors-1-rgba {
+  color: rgba(242, 186, 238, 1);
+}
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,
+-pastel-colors-2-rgba {
+  color: rgba(241, 220, 242, 1);
+}
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,
+-pastel-colors-3-rgba {
+  color: rgba(53, 126, 191, 1);
+}
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,
+-pastel-colors-4-rgba {
+  color: rgba(84, 179, 216, 1);
+}
+.art-photography-of-abstract-fluid-art-painting-with-alcohol-ink,
+-pastel-colors-5-rgba {
+  color: rgba(242, 213, 196, 1);
+}

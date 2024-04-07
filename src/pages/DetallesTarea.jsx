@@ -143,9 +143,6 @@ export const DetallesTarea = () => {
               <fieldset>
                 <legend>Fecha Límite</legend>
                 {formatearFecha(elemento[4])}
-                {/* {new Date(elemento[4]).toLocaleString("es-ES", {
-                  timeZone: "-06:00",
-                })} */}
               </fieldset>
               <fieldset className="uper">
                 <legend>Categoría</legend>
