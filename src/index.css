@@ -241,8 +241,8 @@ h2{
 
 table{
   border: 3px solid #353535;
-  border-radius: 12px;
-  background-color: #CFD8D7;
+  border-radius: 4px;
+  background-color: #ffffff;
 }
 
 .botonesPar{
@@ -329,7 +329,7 @@ table{
   padding-top: 4px;
   align-self: flex-end;
   margin-right: -5px;
-  margin-top: -40px;
+  margin-top: -25px;
   color: white;
   animation: blink-animation2 2s infinite;
   font-weight: bolder;
@@ -413,7 +413,7 @@ table{
   border-radius: 50%; /* Para fijar el círculo */
   z-index: 9999; /* Para que esté por encima de otros elementos */
   text-align: center;
-  padding-top: 2px;
+  padding-top: 4px;
   color: white;
   font-weight: bolder;
   border: 2px solid #ffffff;

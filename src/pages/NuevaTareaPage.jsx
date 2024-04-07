@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -7,8 +7,8 @@ import { registrarEnBase } from "../store/slices/thunks";
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import es from "date-fns/locale/es";
-import { addHours, format } from "date-fns";
-import { useEffect } from "react";
+import { addHours } from "date-fns";
+
 
 registerLocale( 'es', es );
 
@@ -206,14 +206,6 @@ export const NuevaTareaPage = () => {
           </button>
         </div>
       </div>
-      {/* <p>Categoría: {selection}</p>
-      <p>Prioridad: {selection2}</p>
-      
-      <p>Título: {title}</p>
-      <p>Descripción: {description}</p>
-      <p>Nueva tarea: {nuevaTarea}</p> */}
-      {/* <p>Fecha: {fechaInicio && JSON.stringify(fechaInicio)}</p>
-      <p>Fecha: {selection3 && JSON.stringify(selection3)}</p> */}
     </>
   );
 };

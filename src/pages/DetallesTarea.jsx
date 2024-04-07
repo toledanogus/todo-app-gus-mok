@@ -20,45 +20,6 @@ export const DetallesTarea = () => {
   const [rayos, setRayos] = useState(0);
   const navigate = useNavigate();
   //Funciones***********************************************************
-  const formatDate = (fecha) => {
-    const diasSemana = [
-      "Domingo",
-      "Lunes",
-      "Martes",
-      "Miércoles",
-      "Jueves",
-      "Viernes",
-      "Sábado",
-    ];
-    const meses = [
-      "enero",
-      "febrero",
-      "marzo",
-      "abril",
-      "mayo",
-      "junio",
-      "julio",
-      "agosto",
-      "septiembre",
-      "octubre",
-      "noviembre",
-      "diciembre",
-    ];
-
-    // Parseamos la fecha en formato yyyy-mm-dd
-    const [year, month, day] = fecha.split("-");
-    const fechaParseada = new Date(year, month - 1, day);
-
-    // Obtenemos el día de la semana, el día del mes y el mes
-    const diaSemana = diasSemana[fechaParseada.getDay()];
-    const diaMes = fechaParseada.getDate();
-    const mes = meses[fechaParseada.getMonth()];
-    const año = fechaParseada.getFullYear();
-
-    // Formateamos la fecha según tu requerimiento
-    const fechaFormateada = `${diaSemana} ${diaMes} de ${mes} de ${año}`;
-    return fechaFormateada;
-  };
 
   const enviarResueltas = async () => {
     await dispatch(setSolved({ solved: Array.from(checkedItems) }));
@@ -102,28 +63,6 @@ export const DetallesTarea = () => {
     navigate("/inicio");
   };
 
-  /* const formatearFecha = (fechaOriginal) => {
-    const fecha = new Date(fechaOriginal);
-    const optionsFecha = {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    };
-    // Opciones para el formato de la hora
-    const optionsHora = { hour: "numeric", minute: "numeric", hour12: true };
-
-    // Obtén la fecha y hora formateada
-    const fechaFormateada = fecha.toLocaleDateString("es-ES", optionsFecha);
-    const horaFormateada = fecha.toLocaleTimeString("es-ES", optionsHora);
-
-    // Combinar la fecha y la hora formateadas
-    return `${fechaFormateada}, ${horaFormateada}`;
-  }; */
-
-  /* const formatearFecha = (fechaOriginal) => {
-    return format(new Date(fechaOriginal), "EEEE d 'de' MMMM 'de' yyyy h:mm a", { locale: es });
-  } */
   const formatearFecha = (fechaOriginal) => {
     const fecha = new Date(fechaOriginal);
     const fechaFormateada = format(fecha, "EEEE d 'de' MMMM 'de' yyyy", { locale: es });

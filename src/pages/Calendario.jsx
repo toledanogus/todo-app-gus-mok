@@ -1,6 +1,6 @@
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import { format, parse, startOfWeek, getDay, addHours } from "date-fns";
+import { format, parse, startOfWeek, getDay} from "date-fns";
 import esES from "date-fns/locale/es";
 import es from "date-fns/locale/es";
 import { useSelector, useDispatch } from "react-redux";
@@ -30,7 +30,7 @@ const localizer = dateFnsLocalizer({
 });
 
 const formats = {
-  weekdayFormat: (date, culture, localizer) => {
+  weekdayFormat: (date) => {
     const formattedDay = format(date, "eee", { locale: es });
     return (
       formattedDay.charAt(0).toUpperCase() + formattedDay.slice(1).toLowerCase()

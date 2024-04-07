@@ -9,10 +9,8 @@ lerna-debug.log*
 
 node_modules
 dist
-tareasgus
 dist-ssr
 *.local
-tareasgus.zip
 
 # Editor directories and files
 .vscode/*
@@ -24,5 +22,3 @@ tareasgus.zip
 *.njsproj
 *.sln
 *.sw?
-*.zip
-tareasgus.zip

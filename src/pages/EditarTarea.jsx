@@ -1,10 +1,10 @@
-/* eslint-disable no-unused-vars */
+
 import { useDispatch, useSelector } from "react-redux";
 import { editTarea, getTarea } from "../store/slices/thunks";
 import { useEffect, useRef, useState } from "react";
 import { setTareaEditada } from "../store/slices/tareaSlice";
 import { useNavigate } from "react-router-dom";
-import { format, addHours } from "date-fns";
+import { addHours } from "date-fns";
 import DatePicker, { registerLocale } from "react-datepicker";
 import es from "date-fns/locale/es";
 
@@ -79,9 +79,7 @@ export const EditarTarea = () => {
     dispatch(getTarea());
     /* setRayos(rayos+1); */
   }, []);
-  /* useEffect(() => {
-    sliceTostate();
-  }, [rayos]); */
+
 
   useEffect(() => {
     if (tarea && tarea.length > 0) {

@@ -1,37 +1,37 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setFiltro } from "../store/slices/tareaSlice";
 import { useNavigate } from "react-router-dom";
-import l1 from "../assets/iconos2/1.png";
+//import l1 from "../assets/iconos2/1.png";
 import l2 from "../assets/iconos2/2.png";
-import l3 from "../assets/iconos2/3.png";
-import l4 from "../assets/iconos2/4.png";
+//import l3 from "../assets/iconos2/3.png";
+//import l4 from "../assets/iconos2/4.png";
 import l5 from "../assets/iconos2/5.png";
-import l6 from "../assets/iconos2/6.png";
+//import l6 from "../assets/iconos2/6.png";
 import l7 from "../assets/iconos2/7.png";
-import l8 from "../assets/iconos2/8.png";
-import l9 from "../assets/iconos2/9.png";
-import l10 from "../assets/iconos2/10.png";
+//import l8 from "../assets/iconos2/8.png";
+//import l9 from "../assets/iconos2/9.png";
+//import l10 from "../assets/iconos2/10.png";
 import l11 from "../assets/iconos2/11.png";
-import l12 from "../assets/iconos2/12.png";
-import l13 from "../assets/iconos2/13.png";
+//import l12 from "../assets/iconos2/12.png";
+//import l13 from "../assets/iconos2/13.png";
 import l14 from "../assets/iconos2/14.png";
-import l15 from "../assets/iconos2/15.png";
-import l16 from "../assets/iconos2/16.png";
-import l17 from "../assets/iconos2/17.png";
-import l18 from "../assets/iconos2/18.png";
-import l19 from "../assets/iconos2/19.png";
+//import l15 from "../assets/iconos2/15.png";
+//import l16 from "../assets/iconos2/16.png";
+//import l17 from "../assets/iconos2/17.png";
+//import l18 from "../assets/iconos2/18.png";
+//import l19 from "../assets/iconos2/19.png";
 import l20 from "../assets/iconos2/20.png";
 import l21 from "../assets/iconos2/21.png";
-import l22 from "../assets/iconos2/22.png";
+//import l22 from "../assets/iconos2/22.png";
 import l23 from "../assets/iconos2/23.png";
 import l24 from "../assets/iconos2/24.png";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   getNotificacion,
   getTareas,
   traerPendientes,
 } from "../store/slices/thunks";
-import { compareAsc, startOfDay, parseISO, isWithinInterval } from "date-fns";
+import { startOfDay, isWithinInterval } from "date-fns";
 
 
 export const InicioPage = () => {
@@ -41,7 +41,7 @@ export const InicioPage = () => {
   const { notificacion, counterPendientes } = useSelector(
     (state) => state.tarea
   );
-  const [categoriasRender, setCategoriasRender] = useState([
+  /* const [categoriasRender, setCategoriasRender] = useState([
     "escuela",
     "casa",
     "personal",
@@ -50,9 +50,9 @@ export const InicioPage = () => {
     "alumnos",
     "padres",
     "juntos",
-  ]);
+  ]); */
 
-  const filtros = [
+  /* const filtros = [
     { tipo: "todas", icono: l7, texto: "Todas" },
     { tipo: "escuela", icono: l5, texto: "Escuela" },
     { tipo: "casa", icono: l21, texto: "Casa" },
@@ -62,7 +62,7 @@ export const InicioPage = () => {
     { tipo: "alumnos", icono: l14, texto: "Alumnos" },
     { tipo: "padres", icono: l24, texto: "Padres" },
     { tipo: "juntos", icono: l23, texto: "YG" }
-  ];
+  ]; */
 
   //Funciones***********************************************
   const aNuevaTarea = () => {
@@ -92,11 +92,6 @@ export const InicioPage = () => {
     return contador;
   };
 
-  /* const fechaParaComparar = (fecha) => {
-    const fechaObjeto = parseISO(fecha);
-    const fechaInicioDia = startOfDay(fechaObjeto);
-    return fechaInicioDia;
-  } */
 
 const pendientesHoy = (pendientes, categoria) => {
   let counter=0;
@@ -349,15 +344,6 @@ return counter;
         </button>
       </div>
       
-        {/* <div>{counterPendientes &&
-              JSON.stringify(startOfDay(new Date()))
-        }</div>
-        <div>{counterPendientes &&
-              JSON.stringify(startOfDay(new Date(counterPendientes[0][3])))
-        }</div>
-        <div>{counterPendientes &&
-          compareAsc(startOfDay(new Date()),startOfDay(new Date(counterPendientes[0][3])))
-        }</div> */}
     </>
   );
 };
