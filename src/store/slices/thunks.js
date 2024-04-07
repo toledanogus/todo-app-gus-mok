@@ -3,7 +3,7 @@ import { addHours, parse, startOfDay, format } from "date-fns";
 import { tareaApi } from "../../api/tareaApi";
 import { store } from "../store";
 import { setEvents } from "./calendarSlice";
-import { setTareas, setTarea, setNotificacion } from "./tareaSlice";
+import { setTareas, setTarea, setNotificacion, setCounterPendientes } from "./tareaSlice";
 
 export const registrarEnBase = () => async (dispatch, getState) => {
   const state = getState();
@@ -110,3 +110,8 @@ export const getNotificacion = () => async (dispatch) => {
   const { data } = await tareaApi.get(`/notificacion.php`);
   dispatch(setNotificacion({ notificacion: data }));
 };
+
+export const traerPendientes = () => async (dispatch) => {
+  const { data } = await tareaApi.get(`/traerPendientes.php`);
+  dispatch(setCounterPendientes({ counterPendientes: data }));
+}

@@ -13,6 +13,7 @@ name: 'tarea',
     tareaEditada:'',
     solved:'',
     notificacion:0,
+    counterPendientes:'',
   },
   reducers: {
     setNuevaTarea: (state, action) => {
@@ -42,7 +43,10 @@ name: 'tarea',
     setNotificacion: (state, action) => {
       state.notificacion = action.payload.notificacion;
     },
+    setCounterPendientes: (state, action) => {
+      state.counterPendientes = action.payload.counterPendientes;
+    },
   }
 })
 // Action creators are generated for each case reducer function
-export const { setNuevaTarea, setFiltro, setTareas, setTareaID, setTarea, setTareaEditada, setSolved, setFiltro2, setNotificacion} = tareaSlice.actions;
+export const { setNuevaTarea, setFiltro, setTareas, setTareaID, setTarea, setTareaEditada, setSolved, setFiltro2, setNotificacion, setCounterPendientes} = tareaSlice.actions;

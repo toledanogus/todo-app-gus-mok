@@ -25,14 +25,30 @@ import l21 from "../assets/iconos2/21.png";
 import l22 from "../assets/iconos2/22.png";
 import l23 from "../assets/iconos2/23.png";
 import l24 from "../assets/iconos2/24.png";
-import { useEffect } from "react";
-import { getNotificacion, getTareas } from "../store/slices/thunks";
+import { useEffect, useState } from "react";
+import {
+  getNotificacion,
+  getTareas,
+  traerPendientes,
+} from "../store/slices/thunks";
 
 export const InicioPage = () => {
   //Constantes**********************************************
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { notificacion } = useSelector((state) => state.tarea);
+  const { notificacion, counterPendientes } = useSelector(
+    (state) => state.tarea
+  );
+  const [categoriasRender, setCategoriasRender] = useState([
+    "escuela",
+    "casa",
+    "personal",
+    "salud",
+    "diversion",
+    "alumnos",
+    "padres",
+    "juntos",
+  ]);
 
   //Funciones***********************************************
   const aNuevaTarea = () => {
@@ -45,9 +61,21 @@ export const InicioPage = () => {
   };
 
   const aCalendario = () => {
-    dispatch(setFiltro('todas'));
+    dispatch(setFiltro("todas"));
     dispatch(getTareas());
     navigate("/calendario");
+  };
+
+  const contadorP = (counterPendientes, categoria) => {
+    let contador = 0;
+    for (let i = 0; i < counterPendientes.length; i++) {
+      for (let j = 0; j < counterPendientes[i].length; j++) {
+        if (counterPendientes[i][j] === categoria) {
+          contador++;
+        }
+      }
+    }
+    return contador;
   };
 
   //Efectos*************************************************
@@ -55,11 +83,20 @@ export const InicioPage = () => {
     dispatch(getNotificacion());
   }, []);
 
+  useEffect(() => {
+    dispatch(traerPendientes());
+  }, []);
+
+  useEffect(() => {}, [counterPendientes]);
+
   return (
     <>
       <h1 className="tituloInicio">Gestión de Pendientes</h1>
 
       <div className="containerInicio">
+
+
+
         <div
           className="todas"
           colSpan="4"
@@ -68,6 +105,7 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
+          <div className="circuloCounter">{counterPendientes && counterPendientes.length}</div>
           <div className="icono">
             <img className="iconito" src={l7} alt="" />
           </div>
@@ -82,6 +120,9 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
+          {counterPendientes && contadorP(counterPendientes, 'escuela') != 0 ? <div className="circuloCounter">{counterPendientes &&
+          contadorP(counterPendientes, 'escuela')}
+        </div> : null}
           <div className="icono">
             <img className="iconito" src={l5} alt="" />
           </div>
@@ -95,6 +136,9 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
+          {counterPendientes && contadorP(counterPendientes, 'casa') != 0 ? <div className="circuloCounter">{counterPendientes &&
+          contadorP(counterPendientes, 'casa')}
+        </div> : null}
           <div className="icono">
             <img className="iconito" src={l21} alt="" />
           </div>
@@ -111,6 +155,9 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
+          {counterPendientes && contadorP(counterPendientes, 'personal') != 0 ? <div className="circuloCounter">{counterPendientes &&
+          contadorP(counterPendientes, 'personal')}
+        </div> : null}
           <div className="icono">
             <img className="iconito" src={l2} alt="" />
           </div>
@@ -124,6 +171,9 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
+          {counterPendientes && contadorP(counterPendientes, 'salud') != 0 ? <div className="circuloCounter">{counterPendientes &&
+          contadorP(counterPendientes, 'salud')}
+        </div> : null}
           <div className="icono">
             <img className="iconito" src={l20} alt="" />
           </div>
@@ -136,6 +186,9 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
+          {counterPendientes && contadorP(counterPendientes, 'diversion') != 0 ? <div className="circuloCounter">{counterPendientes &&
+          contadorP(counterPendientes, 'diversion')}
+        </div> : null}
           <div className="icono">
             <img className="iconito" src={l11} alt="" />
           </div>
@@ -151,6 +204,9 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
+          {counterPendientes && contadorP(counterPendientes, 'alumnos') != 0 ? <div className="circuloCounter">{counterPendientes &&
+          contadorP(counterPendientes, 'alumnos')}
+        </div> : null}
           <div className="icono">
             <img className="iconito" src={l14} alt="" />
           </div>
@@ -163,6 +219,9 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
+          {counterPendientes && contadorP(counterPendientes, 'padres') != 0 ? <div className="circuloCounter">{counterPendientes &&
+          contadorP(counterPendientes, 'padres')}
+        </div> : null}
           <div className="icono">
             <img className="iconito" src={l24} alt="" />
           </div>
@@ -175,6 +234,9 @@ export const InicioPage = () => {
             aListaDeTareas(nuevoFiltro);
           }}
         >
+          {counterPendientes && contadorP(counterPendientes, 'juntos') != 0 ? <div className="circuloCounter">{counterPendientes &&
+          contadorP(counterPendientes, 'juntos')}
+        </div> : null}
           <div className="icono">
             <img className="iconito" src={l23} alt="" />
           </div>
@@ -196,6 +258,11 @@ export const InicioPage = () => {
           Calendario General
         </button>
       </div>
+      {/* <div>{counterPendientes && counterPendientes.length}</div>
+      {counterPendientes &&
+        categoriasRender.map((elemento) => {
+          return <div key="elemento">{elemento}{contadorP(counterPendientes, elemento)}</div>;
+        })} */}
     </>
   );
 };

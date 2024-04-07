@@ -317,6 +317,40 @@ table{
   }
 }
 
+.circuloCounter{
+  width: 23px; /* Ancho del círculo */
+  height: 21px; /* Altura del círculo */
+  background-color: #453831; /* Color del círculo */
+  border-radius: 50%; /* Para fijar el círculo */
+  z-index: 9999; /* Para que esté por encima de otros elementos */
+  animation: blink-a
+  nimation2 10s infinite;
+  text-align: center;
+  padding-top: 2px;
+  align-self: flex-end;
+  margin-right: -5px;
+  margin-top: -40px;
+  color: white;
+  animation: blink-animation2 2s infinite;
+  font-weight: bolder;
+  border: 2px solid #ffffff;
+}
+
+@keyframes blink-animation2 {
+  0% {
+      opacity: 1;
+      background-color: #a1081a; /* Visible */
+  }
+  50% {
+      opacity: .9; 
+      background-color: #C0091E;/* Invisible */
+  }
+  100% {
+      opacity: 1;
+      background-color: #a50c1e; /* Visible */
+  }
+}
+
 .rbc-event-content{
   font-size:xx-small;
 
