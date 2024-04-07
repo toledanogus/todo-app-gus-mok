@@ -1,22 +1,22 @@
 @font-face {
   font-family: "Gus";
-  src: local("Gus"), url("./assets/AvenirNextLTPro-Regular.otf");
+  src: local("Gus"), url("./assets/Archer Book.otf");
 }
 
 @font-face {
   font-family: "Gus2";
-  src: local("Gus2"), url("./assets/VIVALDII.TTF");
+  src: local("Gus2"), url("./assets/Broadcast_Matter.otf");
 }
 
 body {
-  background-color: #f3f3eb;
+  background-color: #ffffff;
   display: flex;
   font-family: "Gus";
   justify-content: center;
 }
 
 h1 {
-  color: #453831;
+  color: #1F1FFF;
   font-family: "Gus2";
   padding-left: 40px;
   padding-right: 40px;
@@ -36,7 +36,7 @@ div.juntos,
 div.salud,
 div.alumnos,
 div.padres {
-  background-color: #cfd8d7;
+  background-color: #b9edff;
   height: 120px;
   width: 33%;
   border-radius: 20px;
@@ -44,16 +44,18 @@ div.padres {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid #9e9e9e;
+  border: 1px solid #0b9bff;
   font-family: "Gus";
   flex-direction: column;
+  color: #11365a;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
 div.escuela,
 div.familia,
 div.personal,
 div.diversion {
-  background-color: #cfd8d7;
+  background-color: #b9edff;
   height: 120px;
   width: 33%;
   border-radius: 20px;
@@ -61,9 +63,11 @@ div.diversion {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid #9e9e9e;
+  border: 1px solid #0b9bff;
   font-family: "Gus";
   flex-direction: column;
+  color: #11365a;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .icono {
@@ -72,12 +76,12 @@ div.diversion {
 
 button {
   /* width: 100%; */
-  background-color: #c0091e;
+  background-color: #28b9ff;
   border-radius: 10px;
   padding: 10px;
-  border: 3px solid #3e3e3e;
+  border: 1px solid #0b9bff;
   font-size: medium;
-  color: #fffaf8;
+  color: #ffffff;
   /* width: 77%; */
 }
 
@@ -112,8 +116,15 @@ button {
 td {
   white-space: nowrap;
   text-align: center;
-  padding: 5px;
+  padding: 8px;
 }
+
+td::after{
+  content: ".";
+}
+
+
+
 
 .tituloTarea {
   text-align: left;
@@ -129,21 +140,28 @@ td {
   overflow: hidden;
   text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) si el texto no cabe */
   white-space: wrap;
-  font-weight: bolder;
+  /* font-weight: bolder; */
   /* background-color: #ffdddd; */
   border-radius: 8px;
-  border: 1px solid #453831;
+  border: 0.5px solid #0f68be;
 }
 
 button.registrar {
-  background-color: #453831;
+  background-color: #ffffff;
+  color: #0a83eb;
+  margin-top: 10px;
+  width: 77%;
+}
+
+button.registrar2 {
+  background-color: #0a83eb;
   color: #ffffff;
   margin-top: 10px;
   width: 77%;
 }
 
 button.aInicio {
-  background-color: #c0091e;
+  background-color: #28b9ff;
   color: #ffffff;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -166,11 +184,11 @@ button.aInicio {
 }
 
 th {
-  background-color: #453831;
-  border-radius: 8px;
-  /* border: 3px solid #DEDEDD; */
+  background-color: #0b9bff;
+  border-radius: 3px;
+  border: 1px solid #b9edff;
   padding: 5px;
-  color: #f0f0f0;
+  color: #ffffff;
 }
 
 legend {
@@ -200,10 +218,12 @@ img {
 }
 
 fieldset {
-  background-color: #e1eeed;
+  background-color: #ffffff;
   /* background-color:#CFD8D7; */
   width: 70%;
   margin-top: 10px;
+  border: 1px solid #0b9bff;
+  border-radius: 5px;
 }
 
 #completa1,
@@ -212,7 +232,7 @@ fieldset {
 }
 
 .completada {
-  color: #367fbf;
+  color: #0f68be;
   font-weight: bolder;
 }
 
@@ -257,9 +277,13 @@ h2 {
 }
 
 table {
-  border: 3px solid #353535;
-  border-radius: 4px;
+  border: 1px solid #D4D4D8;
+  border-radius: 10px;
   background-color: #ffffff;
+  width: 94%;
+  padding: 5px;
+  color: #393939;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
 .botonesPar {
@@ -285,12 +309,12 @@ table {
 }
 
 .iz1 {
-  background-color: #cfd8d7;
-  color: black;
+  background-color: #00E8DA;
+  color: rgb(255, 255, 255);
 }
 
 .iz2 {
-  background-color: #453831;
+  background-color: #0f68be;
 }
 
 .der1 {
@@ -298,7 +322,7 @@ table {
 }
 
 .der2 {
-  background-color: #c0091e;
+  background-color: #28b9ff;
 }
 
 .containerCalendar {
@@ -335,7 +359,7 @@ table {
 .circuloCounter {
   width: 23px; /* Ancho del círculo */
   height: 21px; /* Altura del círculo */
-  background-color: #453831; /* Color del círculo */
+  background-color: #0f68be; /* Color del círculo */
   border-radius: 50%; /* Para fijar el círculo */
   z-index: 9999; /* Para que esté por encima de otros elementos */
   animation: blink-a nimation2 10s infinite;
@@ -344,24 +368,24 @@ table {
   align-self: flex-end;
   margin-right: -5px;
   margin-top: -25px;
-  color: white;
+  color: #11365a;
   animation: blink-animation2 2s infinite;
-  font-weight: bolder;
-  border: 2px solid #ffffff;
+  font-weight: bold;
+  border: 1px solid #0b9bff;
 }
 
 @keyframes blink-animation2 {
   0% {
     opacity: 1;
-    background-color: #a1081a; /* Visible */
+    background-color: #ffffff; /* Visible */
   }
   50% {
     opacity: 0.9;
-    background-color: #c0091e; /* Invisible */
+    background-color: #edfbff; /* Invisible */
   }
   100% {
     opacity: 1;
-    background-color: #a50c1e; /* Visible */
+    background-color: #ffffff; /* Visible */
   }
 }
 
@@ -370,42 +394,49 @@ table {
 }
 
 .custom-sunday-cell {
-  background-color: rgb(250, 220, 220);
+  background-color: #88e5ff;
+  color: white !important;
 }
 .custom-saturday-cell {
-  background-color: rgb(237, 217, 190);
+  background-color: #b9edff;
 }
 
 .calendarioLink {
   margin-top: 10px;
   width: 77%;
-  background-color: #453831;
+  background-color: #0f68be;
 }
 
 .rbc-toolbar button:active,
 .rbc-toolbar button.rbc-active {
-  background-color: #453831 !important;
+  background-color: #0f68be !important;
   color: white !important;
-  border-color: #453831 !important;
+  border-color: #0a83eb !important;
 }
 .rbc-toolbar button {
-  background-color: #cfd8d7 !important;
-  border-color: #453831 !important;
+  background-color: #ffffff !important;
+  border-color: #0a83eb !important;
+  color: #50d3ff !important;
 }
 
 .rbc-month-view {
-  border: 1px solid #453831 !important;
-  background-color: #ffffff;
+  border: 1px solid #0a83eb !important;
+  background-color: #ffffff !important;
+  border-radius: 8px !important;
 }
 
 .rbc-day-bg + .rbc-day-bg,
 .rbc-month-row + .rbc-month-row,
 .rbc-header + .rbc-header,
 .rbc-header {
-  border-color: #453831 !important;
+  border-color: #0a83eb !important;
+  /* color: white !important; */
+  
 }
 .rbc-header {
-  background-color: #cfd8d7 !important;
+  background-color: #0b9bff !important;
+  color: white;
+  font-weight: normal !important;
 }
 
 .react-datepicker-popper {
@@ -420,7 +451,7 @@ table {
 }
 
 .gusPersonal {
-  background-color: #453831;
+  background-color: #0f68be;
   width: 77%;
   margin-top: 10px;
 }
@@ -428,15 +459,73 @@ table {
 .circulo-hoy {
   width: 23px; /* Ancho del círculo */
   height: 21px; /* Altura del círculo */
-  background-color: #453831; /* Color del círculo */
+  background-color: #0f68be; /* Color del círculo */
   border-radius: 50%; /* Para fijar el círculo */
   z-index: 9999; /* Para que esté por encima de otros elementos */
   text-align: center;
   padding-top: 4px;
   color: white;
   font-weight: bolder;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
 }
+
+.circulo-alta {
+  width: 10px; /* Ancho del círculo */
+  height: 10px; /* Altura del círculo */
+  background-color: #11365a; /* Color de fondo del círculo */
+  border-radius: 50%; /* Hace que el círculo tenga esquinas redondeadas */
+  display: inline-block; /* Hace que el span se comporte como un bloque en línea */
+  text-align: center; /* Alinea el contenido del span al centro */
+  line-height: 100px; /* Alinea verticalmente el contenido del span al centro */
+  color: white; /* Color del texto dentro del círculo */
+  font-size: 20px; /* Tamaño de la fuente del texto dentro del círculo */
+}
+
+.circulo-media {
+  width: 10px; /* Ancho del círculo */
+  height: 10px; /* Altura del círculo */
+  background-color: #0b9bff; /* Color de fondo del círculo */
+  border-radius: 50%; /* Hace que el círculo tenga esquinas redondeadas */
+  display: inline-block; /* Hace que el span se comporte como un bloque en línea */
+  text-align: center; /* Alinea el contenido del span al centro */
+  line-height: 100px; /* Alinea verticalmente el contenido del span al centro */
+  color: white; /* Color del texto dentro del círculo */
+  font-size: 20px; /* Tamaño de la fuente del texto dentro del círculo */
+}
+
+.circulo-baja {
+  width: 10px; /* Ancho del círculo */
+  height: 10px; /* Altura del círculo */
+  background-color: #00E8DA; /* Color de fondo del círculo */
+  border-radius: 50%; /* Hace que el círculo tenga esquinas redondeadas */
+  display: inline-block; /* Hace que el span se comporte como un bloque en línea */
+  text-align: center; /* Alinea el contenido del span al centro */
+  line-height: 100px; /* Alinea verticalmente el contenido del span al centro */
+  color: white; /* Color del texto dentro del círculo */
+  font-size: 20px; /* Tamaño de la fuente del texto dentro del círculo */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*#FAF2E7
 /*#E1EDEB

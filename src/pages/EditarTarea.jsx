@@ -239,7 +239,7 @@ export const EditarTarea = () => {
             </fieldset>
           ))}
 
-        <button className="registrar" onClick={enviarEditada}>
+        <button className="registrar2" onClick={enviarEditada}>
           Guardar Cambios
         </button>
         <button onClick={aInicio} className="aInicio">

@@ -78,34 +78,31 @@ export const ListaTareas = () => {
   // Renderizado
   return (
     <>
-      <h1>Lista de Tareas</h1>
-      <h2 className="uper">{filtro}</h2>
+      
+      <h1 className="uper">{filtro}</h1>
       <div className="contenedorx">
         <table>
           <thead>
-            <th colSpan="2">Tarea</th>
+            <th colSpan="1">Tarea</th>
             <th>Inicio</th>
             <th>Fin</th>
           </thead>
           <tbody>
             {tareasActive && tareasActive.map((elemento, index) => {
-              let imageSource = etiquetaImage1;
+              let imageSource = 'circulo-baja';
               if (elemento[2] === 2) {
-                imageSource = etiquetaImage2;
+                imageSource = 'circulo-media';
               } else if (elemento[2] === 3) {
-                imageSource = etiquetaImage3;
+                imageSource = 'circulo-alta';
               }
               return (
                 <tr key={index}>
-                  <td>
-                    <img src={imageSource} alt="" />
-                  </td>
                   <td
                     className={elemento[8] && elemento[8]==='nuevoValor' ? 'activo' : 'tituloTarea'}
                     id={`completa${elemento[3]}`}
                     onClick={() => aDetalles(elemento[7], elemento[6])}
-                  >
-                    {elemento[0]}
+                  ><span className={imageSource}></span>
+                    {` ${elemento[0]}`}
                   </td>
                   <td className="centrado">{formatearFecha(elemento[4])}</td>
                   <td className="centrado">{formatearFecha(elemento[5])}</td>

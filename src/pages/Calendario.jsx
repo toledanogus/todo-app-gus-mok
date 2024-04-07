@@ -82,11 +82,11 @@ export const Calendario = () => {
     let backgroundColor = "";
 
     if (event.prioridad === 2) {
-      backgroundColor = "#9FC131";
+      backgroundColor = "#0b9bff";
     } else if (event.prioridad === 1) {
-      backgroundColor = "#76b0ee";
+      backgroundColor = "#00E8DA";
     } else if (event.prioridad === 3) {
-      backgroundColor = "red";
+      backgroundColor = "#11365a";
     }
 
     const style = {
