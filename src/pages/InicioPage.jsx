@@ -31,6 +31,8 @@ import {
   getTareas,
   traerPendientes,
 } from "../store/slices/thunks";
+import { compareAsc, startOfDay, parseISO } from "date-fns";
+
 
 export const InicioPage = () => {
   //Constantes**********************************************
@@ -49,6 +51,18 @@ export const InicioPage = () => {
     "padres",
     "juntos",
   ]);
+
+  const filtros = [
+    { tipo: "todas", icono: l7, texto: "Todas" },
+    { tipo: "escuela", icono: l5, texto: "Escuela" },
+    { tipo: "casa", icono: l21, texto: "Casa" },
+    { tipo: "personal", icono: l2, texto: "Personal" },
+    { tipo: "salud", icono: l20, texto: "Salud" },
+    { tipo: "diversion", icono: l11, texto: "Diversión" },
+    { tipo: "alumnos", icono: l14, texto: "Alumnos" },
+    { tipo: "padres", icono: l24, texto: "Padres" },
+    { tipo: "juntos", icono: l23, texto: "YG" }
+  ];
 
   //Funciones***********************************************
   const aNuevaTarea = () => {
@@ -77,6 +91,36 @@ export const InicioPage = () => {
     }
     return contador;
   };
+
+  /* const fechaParaComparar = (fecha) => {
+    const fechaObjeto = parseISO(fecha);
+    const fechaInicioDia = startOfDay(fechaObjeto);
+    return fechaInicioDia;
+  } */
+
+const pendientesHoy = (pendientes, categoria) => {
+  let counter=0;
+if (categoria === 'todas') {
+  const fechasTodas = pendientes.map(subarray => subarray[3]);
+  fechasTodas.map((elemento)=>{
+    const numerico = compareAsc(startOfDay(new Date()),startOfDay(new Date(elemento)));
+    if (numerico === 0) {
+      counter = counter+1;
+    }
+  })
+  return counter;
+}
+  const subarraysCasa = pendientes.filter(subarray => subarray[2] === categoria);
+  const fechasDeCasa = subarraysCasa.map(subarray => subarray[3]);
+ 
+  fechasDeCasa.map((elemento)=>{
+    const numerico = compareAsc(startOfDay(new Date()),startOfDay(new Date(elemento)));
+    if (numerico === 0) {
+      counter = counter+1;
+    }
+  })
+  return counter;
+}
 
   //Efectos*************************************************
   useEffect(() => {
@@ -110,7 +154,12 @@ export const InicioPage = () => {
             <img className="iconito" src={l7} alt="" />
           </div>
           Todas
+          {counterPendientes && pendientesHoy(counterPendientes, 'todas' )!= 0 ?
+          <div className="circulo-hoy">
+            {pendientesHoy(counterPendientes, 'todas' )}
+          </div>: null} 
         </div>
+        
 
         <div
           className="escuela"
@@ -127,6 +176,10 @@ export const InicioPage = () => {
             <img className="iconito" src={l5} alt="" />
           </div>
           Escuela
+          {counterPendientes && pendientesHoy(counterPendientes, 'escuela' )!= 0 ?
+          <div className="circulo-hoy">
+            {pendientesHoy(counterPendientes, 'escuela' )}
+          </div>: null} 
         </div>
         <div
           className="casa"
@@ -143,6 +196,10 @@ export const InicioPage = () => {
             <img className="iconito" src={l21} alt="" />
           </div>
           Casa
+          {counterPendientes && pendientesHoy(counterPendientes, 'casa' )!= 0 ?
+          <div className="circulo-hoy">
+            {pendientesHoy(counterPendientes, 'casa' )}
+          </div>: null} 
         </div>
       </div>
       {/* linea siguiente *************************************/}
@@ -162,6 +219,10 @@ export const InicioPage = () => {
             <img className="iconito" src={l2} alt="" />
           </div>
           Personal
+          {counterPendientes && pendientesHoy(counterPendientes, 'personal' )!= 0 ?
+          <div className="circulo-hoy">
+            {pendientesHoy(counterPendientes, 'personal' )}
+          </div>: null} 
         </div>
 
         <div
@@ -178,6 +239,10 @@ export const InicioPage = () => {
             <img className="iconito" src={l20} alt="" />
           </div>
           Salud
+          {counterPendientes && pendientesHoy(counterPendientes, 'salud' )!= 0 ?
+          <div className="circulo-hoy">
+            {pendientesHoy(counterPendientes, 'salud' )}
+          </div>: null} 
         </div>
         <div
           className="diversion"
@@ -193,6 +258,10 @@ export const InicioPage = () => {
             <img className="iconito" src={l11} alt="" />
           </div>
           Diversión
+          {counterPendientes && pendientesHoy(counterPendientes, 'diversion' )!= 0 ?
+          <div className="circulo-hoy">
+            {pendientesHoy(counterPendientes, 'diversion' )}
+          </div>: null} 
         </div>
       </div>
       {/* linea siguiente *************************************/}
@@ -211,6 +280,10 @@ export const InicioPage = () => {
             <img className="iconito" src={l14} alt="" />
           </div>
           Alumnos
+          {counterPendientes && pendientesHoy(counterPendientes, 'alumnos' )!= 0 ?
+          <div className="circulo-hoy">
+            {pendientesHoy(counterPendientes, 'alumnos' )}
+          </div>: null} 
         </div>
         <div
           className="padres"
@@ -226,6 +299,10 @@ export const InicioPage = () => {
             <img className="iconito" src={l24} alt="" />
           </div>
           Padres
+          {counterPendientes && pendientesHoy(counterPendientes, 'padres' )!= 0 ?
+          <div className="circulo-hoy">
+            {pendientesHoy(counterPendientes, 'padres' )}
+          </div>: null} 
         </div>
         <div
           className="juntos"
@@ -241,6 +318,10 @@ export const InicioPage = () => {
             <img className="iconito" src={l23} alt="" />
           </div>
           YG
+          {counterPendientes && pendientesHoy(counterPendientes, 'juntos' )!= 0 ?
+          <div className="circulo-hoy">
+            {pendientesHoy(counterPendientes, 'juntos' )}
+          </div>: null} 
         </div>
       </div>
       <div className="containerInicio">
@@ -258,11 +339,16 @@ export const InicioPage = () => {
           Calendario General
         </button>
       </div>
-      {/* <div>{counterPendientes && counterPendientes.length}</div>
-      {counterPendientes &&
-        categoriasRender.map((elemento) => {
-          return <div key="elemento">{elemento}{contadorP(counterPendientes, elemento)}</div>;
-        })} */}
+      
+        {/* <div>{counterPendientes &&
+              JSON.stringify(startOfDay(new Date()))
+        }</div>
+        <div>{counterPendientes &&
+              JSON.stringify(startOfDay(new Date(counterPendientes[0][3])))
+        }</div>
+        <div>{counterPendientes &&
+          compareAsc(startOfDay(new Date()),startOfDay(new Date(counterPendientes[0][3])))
+        }</div> */}
     </>
   );
 };
