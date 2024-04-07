@@ -31,7 +31,7 @@ import {
   getTareas,
   traerPendientes,
 } from "../store/slices/thunks";
-import { compareAsc, startOfDay, parseISO } from "date-fns";
+import { compareAsc, startOfDay, parseISO, isWithinInterval } from "date-fns";
 
 
 export const InicioPage = () => {
@@ -101,26 +101,35 @@ export const InicioPage = () => {
 const pendientesHoy = (pendientes, categoria) => {
   let counter=0;
 if (categoria === 'todas') {
-  const fechasTodas = pendientes.map(subarray => subarray[3]);
+  const fechasTodas = pendientes.map(subarray => [subarray[3], subarray[4]]);
+
   fechasTodas.map((elemento)=>{
-    const numerico = compareAsc(startOfDay(new Date()),startOfDay(new Date(elemento)));
-    if (numerico === 0) {
+    const isActive = isWithinInterval(startOfDay(new Date()), {
+      start: startOfDay(new Date(elemento[1])),
+      end: startOfDay(new Date(elemento[0]))
+    });
+    if (isActive) {
       counter = counter+1;
     }
   })
   return counter;
-}
+}else{
   const subarraysCasa = pendientes.filter(subarray => subarray[2] === categoria);
-  const fechasDeCasa = subarraysCasa.map(subarray => subarray[3]);
+  const fechasDeCasa = subarraysCasa.map(subarray => [subarray[3], subarray[4]]);
  
-  fechasDeCasa.map((elemento)=>{
-    const numerico = compareAsc(startOfDay(new Date()),startOfDay(new Date(elemento)));
-    if (numerico === 0) {
-      counter = counter+1;
-    }
-  })
-  return counter;
+fechasDeCasa.map((elemento)=>{
+  const isActive = isWithinInterval(startOfDay(new Date()), {
+    start: startOfDay(new Date(elemento[1])),
+    end: startOfDay(new Date(elemento[0]))
+  });
+  if (isActive) {
+    counter = counter+1;
+  }
+})
+return counter;
 }
+}
+  
 
   //Efectos*************************************************
   useEffect(() => {
