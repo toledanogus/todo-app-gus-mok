@@ -37,7 +37,7 @@ export const ListaTareas = () => {
   const isActive = (categorias) => {
     if (tareas) {
       const nuevasTareas = tareas.map(tarea => {
-        if (tarea[6] === categorias) {
+        if (tarea[6] === categorias && tarea[3] === 0 ) {
           const isActive1 = isWithinInterval(startOfDay(new Date()), {
             start: startOfDay(new Date(tarea[4])),
             end: startOfDay(new Date(tarea[5]))
@@ -47,7 +47,7 @@ export const ListaTareas = () => {
           }else{
             return [...tarea, "nada"];
           }
-        } else if(tarea[6] != categorias){
+        } else if(tarea[6] != categorias && tarea[3] === 0){
           const isActive1 = isWithinInterval(startOfDay(new Date()), {
             start: startOfDay(new Date(tarea[4])),
             end: startOfDay(new Date(tarea[5]))
