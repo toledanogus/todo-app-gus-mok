@@ -8,12 +8,12 @@ $x = json_decode($json_data);
 
 if ($x->filter === 'todas') {
     /* $respuesta = mysqli_query($conn, "SELECT titulo, descripcion, prioridad, completada, fechalimite, categoria, id FROM tareasgus ORDER BY prioridad DESC"); */
-    $respuesta = mysqli_query($conn, "(SELECT titulo, descripcion, prioridad, completada, fechaInicio, fechalimite, categoria, id FROM tareasgus) UNION ALL (SELECT titulo, descripcion, prioridad, completada, fechaInicio, fechalimite, categoria, id FROM tareasjuntos) ORDER BY completada ASC, fechalimite ASC, prioridad DESC");
+    $respuesta = mysqli_query($conn, "(SELECT titulo, descripcion, prioridad, completada, fechaInicio, fechalimite, categoria, id FROM tareasgus) UNION ALL (SELECT titulo, descripcion, prioridad, completada, fechaInicio, fechalimite, categoria, id FROM tareasjuntos) ORDER BY completada ASC, fechaInicio ASC, prioridad DESC");
 
 }elseif ($x->filter === 'juntos'){
-    $respuesta = mysqli_query($conn, "SELECT titulo, descripcion, prioridad, completada, fechaInicio,fechalimite, categoria, id FROM tareasjuntos WHERE categoria = '".$x->filter."' ORDER BY completada ASC, fechalimite ASC, prioridad DESC");
+    $respuesta = mysqli_query($conn, "SELECT titulo, descripcion, prioridad, completada, fechaInicio,fechalimite, categoria, id FROM tareasjuntos WHERE categoria = '".$x->filter."' ORDER BY completada ASC, fechaInicio ASC, prioridad DESC");
 }else{
-    $respuesta = mysqli_query($conn, "SELECT titulo, descripcion, prioridad, completada, fechaInicio, fechalimite, categoria, id FROM tareasgus WHERE categoria = '".$x->filter."' ORDER BY completada ASC, fechalimite ASC, prioridad DESC");
+    $respuesta = mysqli_query($conn, "SELECT titulo, descripcion, prioridad, completada, fechaInicio, fechalimite, categoria, id FROM tareasgus WHERE categoria = '".$x->filter."' ORDER BY completada ASC, fechaInicio ASC, prioridad DESC");
 }
 
 
