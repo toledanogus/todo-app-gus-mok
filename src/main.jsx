@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index2.css';
 import { AppRouter } from './router/AppRouter';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';

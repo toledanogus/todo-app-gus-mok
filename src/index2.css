@@ -9,14 +9,14 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #fff8ed;
   display: flex;
   font-family: "Gus";
   justify-content: center;
 }
 
 h1 {
-  color: #135995;
+  color: #7f340f;
   font-family: "Gus2";
   padding-left: 40px;
   padding-right: 40px;
@@ -36,7 +36,7 @@ div.juntos,
 div.salud,
 div.alumnos,
 div.padres {
-  background-color: #d7f4ff;
+  background-color: #fff0d4;
   height: 120px;
   width: 33%;
   border-radius: 20px;
@@ -44,10 +44,10 @@ div.padres {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #0b9bff;
+  border: 1px solid #ff8e24;
   font-family: "Gus";
   flex-direction: column;
-  color: #11365a;
+  color: #451805;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -55,7 +55,7 @@ div.escuela,
 div.familia,
 div.personal,
 div.diversion {
-  background-color: #d7f4ff;
+  background-color: #fff0d4;
   height: 120px;
   width: 33%;
   border-radius: 20px;
@@ -63,10 +63,10 @@ div.diversion {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #0b9bff;
+  border: 1px solid #ff8e24;
   font-family: "Gus";
   flex-direction: column;
-  color: #11365a;
+  color: #451805;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -76,10 +76,10 @@ div.diversion {
 
 button {
   /* width: 100%; */
-  background-color: #28b9ff;
+  background-color: #ff8e24;
   border-radius: 10px;
   padding: 10px;
-  border: 1px solid #0b9bff;
+  border: 1px solid #ff8e24;
   font-size: medium;
   color: #ffffff;
   /* width: 77%; */
@@ -144,25 +144,25 @@ td::after{
   font-style: italic;
   /* background-color: #ffdddd; */
   border-radius: 8px;
-  border: 0.5px solid #0f68be;
+  border: 0.5px solid #9e3d0e;
 }
 
 button.registrar {
   background-color: #ffffff;
-  color: #0a83eb;
+  color: #c74d07;
   margin-top: 10px;
   width: 77%;
 }
 
 button.registrar2 {
-  background-color: #0a83eb;
+  background-color: #c74d07;
   color: #ffffff;
   margin-top: 10px;
   width: 77%;
 }
 
 button.aInicio {
-  background-color: #28b9ff;
+  background-color: #ff8e24;
   color: #ffffff;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -185,9 +185,9 @@ button.aInicio {
 }
 
 th {
-  background-color: #0b9bff;
+  background-color: #ff8e24;
   border-radius: 3px;
-  border: 1px solid #b9edff;
+  border: 1px solid #ffdda8;
   padding: 5px;
   color: #ffffff;
   font-weight: normal;
@@ -224,7 +224,7 @@ fieldset {
   /* background-color:#CFD8D7; */
   width: 70%;
   margin-top: 10px;
-  border: 1px solid #0b9bff;
+  border: 1px solid #ff8e24;
   border-radius: 5px;
 }
 
@@ -234,7 +234,7 @@ fieldset {
 }
 
 .completada {
-  color: #0f68be;
+  color: #9e3d0e;
   font-weight: bolder;
 }
 
@@ -311,12 +311,12 @@ table {
 }
 
 .iz1 {
-  background-color: #00E8DA;
+  background-color: #f06706;
   color: rgb(255, 255, 255);
 }
 
 .iz2 {
-  background-color: #0f68be;
+  background-color: #9e3d0e;
 }
 
 .der1 {
@@ -324,7 +324,7 @@ table {
 }
 
 .der2 {
-  background-color: #28b9ff;
+  background-color: #ff8e24;
 }
 
 .containerCalendar {
@@ -361,7 +361,7 @@ table {
 .circuloCounter {
   width: 23px; /* Ancho del círculo */
   height: 21px; /* Altura del círculo */
-  background-color: #0f68be; /* Color del círculo */
+  background-color: #9e3d0e; /* Color del círculo */
   border-radius: 50%; /* Para fijar el círculo */
   z-index: 9999; /* Para que esté por encima de otros elementos */
   animation: blink-a nimation2 10s infinite;
@@ -370,10 +370,10 @@ table {
   align-self: flex-end;
   margin-right: -5px;
   margin-top: -25px;
-  color: #11365a;
+  color: #451805;
   animation: blink-animation2 2s infinite;
   font-weight: bold;
-  border: 1px solid #0b9bff;
+  border: 1px solid #ff8e24;
 }
 
 @keyframes blink-animation2 {
@@ -383,7 +383,7 @@ table {
   }
   50% {
     opacity: 0.9;
-    background-color: #edfbff; /* Invisible */
+    background-color: #fff8ed; /* Invisible */
   }
   100% {
     opacity: 1;
@@ -396,33 +396,33 @@ table {
 }
 
 .custom-sunday-cell {
-  background-color: #88e5ff;
+  background-color: #ffc570;
   color: white !important;
 }
 .custom-saturday-cell {
-  background-color: #b9edff;
+  background-color: #ffdda8;
 }
 
 .calendarioLink {
   margin-top: 10px;
   width: 77%;
-  background-color: #0f68be;
+  background-color: #9e3d0e;
 }
 
 .rbc-toolbar button:active,
 .rbc-toolbar button.rbc-active {
-  background-color: #0f68be !important;
+  background-color: #9e3d0e !important;
   color: white !important;
-  border-color: #0a83eb !important;
+  border-color: #c74d07 !important;
 }
 .rbc-toolbar button {
   background-color: #ffffff !important;
-  border-color: #0a83eb !important;
-  color: #50d3ff !important;
+  border-color: #c74d07 !important;
+  color: #ff8e24 !important;
 }
 
 .rbc-month-view {
-  border: 1px solid #0a83eb !important;
+  border: 1px solid #c74d07 !important;
   background-color: #ffffff !important;
   border-radius: 8px !important;
 }
@@ -431,12 +431,12 @@ table {
 .rbc-month-row + .rbc-month-row,
 .rbc-header + .rbc-header,
 .rbc-header {
-  border-color: #0a83eb !important;
+  border-color: #c74d07 !important;
   /* color: white !important; */
   
 }
 .rbc-header {
-  background-color: #0b9bff !important;
+  background-color: #ff8e24 !important;
   color: white;
   font-weight: normal !important;
 }
@@ -453,7 +453,7 @@ table {
 }
 
 .gusPersonal {
-  background-color: #0f68be;
+  background-color: #9e3d0e;
   width: 77%;
   margin-top: 10px;
 }
@@ -461,7 +461,7 @@ table {
 .circulo-hoy {
   width: 23px; /* Ancho del círculo */
   height: 21px; /* Altura del círculo */
-  background-color: #0f68be; /* Color del círculo */
+  background-color: #9e3d0e; /* Color del círculo */
   border-radius: 50%; /* Para fijar el círculo */
   z-index: 9999; /* Para que esté por encima de otros elementos */
   text-align: center;
@@ -474,7 +474,7 @@ table {
 .circulo-alta {
   width: 10px; /* Ancho del círculo */
   height: 10px; /* Altura del círculo */
-  background-color: #11365a; /* Color de fondo del círculo */
+  background-color: #451805; /* Color de fondo del círculo */
   border-radius: 50%; /* Hace que el círculo tenga esquinas redondeadas */
   display: inline-block; /* Hace que el span se comporte como un bloque en línea */
   text-align: center; /* Alinea el contenido del span al centro */
@@ -486,7 +486,7 @@ table {
 .circulo-media {
   width: 10px; /* Ancho del círculo */
   height: 10px; /* Altura del círculo */
-  background-color: #0b9bff; /* Color de fondo del círculo */
+  background-color: #f06706; /* Color de fondo del círculo */
   border-radius: 50%; /* Hace que el círculo tenga esquinas redondeadas */
   display: inline-block; /* Hace que el span se comporte como un bloque en línea */
   text-align: center; /* Alinea el contenido del span al centro */
@@ -498,7 +498,7 @@ table {
 .circulo-baja {
   width: 10px; /* Ancho del círculo */
   height: 10px; /* Altura del círculo */
-  background-color: #00E8DA; /* Color de fondo del círculo */
+  background-color: #ffc570; /* Color de fondo del círculo */
   border-radius: 50%; /* Hace que el círculo tenga esquinas redondeadas */
   display: inline-block; /* Hace que el span se comporte como un bloque en línea */
   text-align: center; /* Alinea el contenido del span al centro */

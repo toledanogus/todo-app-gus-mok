@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { deleteTarea, sendSolved } from "../store/slices/thunks";
 import { setSolved, setTareaID } from "../store/slices/tareaSlice";
 import { useNavigate } from "react-router-dom";
-import label1 from "../assets/etiqueta1.png";
-import label2 from "../assets/etiqueta2.png";
-import label3 from "../assets/etiqueta3.png";
+import label1 from "../assets/etiquetax.png";
+import label2 from "../assets/etiquetay.png";
+import label3 from "../assets/etiquetaz.png";
 import { es } from 'date-fns/locale';
 import { format } from "date-fns";
 /* import {utcToZonedTime} from 'date-fns-tz'; */
@@ -133,14 +133,14 @@ export const DetallesTarea = () => {
                   <span className="completada">Tarea completada.</span>
                 )}
               </fieldset>
-              <fieldset>
+              <fieldset className="fechas-mayuscula">
                 <legend>Fecha De Inicio</legend>
                 {formatearFecha(elemento[7])}
                 {/* {new Date(elemento[7]).toLocaleString("es-ES", {
                   timeZone: "UTC",
                 })} */}
               </fieldset>
-              <fieldset>
+              <fieldset className="fechas-mayuscula">
                 <legend>Fecha Límite</legend>
                 {formatearFecha(elemento[4])}
               </fieldset>
