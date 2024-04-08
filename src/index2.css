@@ -511,6 +511,15 @@ table {
   text-transform: capitalize;
 }
 
+.rbc-show-more{
+  color: #ff2301 !important;
+  background-color: rgba(255, 255, 255, 0) !important;
+  font-size: 10px !important;
+}
+
+.rbc-today{
+  background-color:#36e94f42 !important;
+}
 
 
 

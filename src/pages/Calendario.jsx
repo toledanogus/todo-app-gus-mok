@@ -91,7 +91,7 @@ export const Calendario = () => {
 
     const style = {
       backgroundColor: backgroundColor,
-      borderRadius: "0px",
+      borderRadius: "5px",
       opacity: 0.9,
       color: "white",
     };
@@ -115,7 +115,7 @@ export const Calendario = () => {
       time: "Hora",
       event: "Evento",
       noEventsInRange: "No hay eventos en este rango",
-      showMore: (total) => `+ Ver más (${total})`,
+      showMore: (total) => `+${total}`,
     };
   };
 
