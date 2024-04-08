@@ -32,7 +32,7 @@ export const getTareas = () => async (dispatch, getState) => {
   dispatch(setTareas({ tareas: data }));
  
   const eventos = data.map(elemento => {
-   
+    if (elemento[3] === 0) {
     return {
       title: elemento[0],
       notes: elemento[1],
@@ -42,6 +42,7 @@ export const getTareas = () => async (dispatch, getState) => {
       filter: elemento[6],
       prioridad: elemento [2],
     };
+  }
   });
   dispatch(setEvents({ events: eventos }));
   
