@@ -48,7 +48,7 @@ div.padres {
   font-family: "Gus";
   flex-direction: column;
   color: #451805;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px #ff8e24;
 }
 
 div.escuela,
@@ -67,7 +67,7 @@ div.diversion {
   font-family: "Gus";
   flex-direction: column;
   color: #451805;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px #ff8e24;
 }
 
 .icono {
@@ -116,14 +116,12 @@ button {
 td {
   white-space: nowrap;
   text-align: center;
-  padding: 8px;
+  padding: 8px;  
 }
 
-td::after{
+/* td::after{
   content: ".";
-}
-
-
+} */
 
 
 .tituloTarea {
@@ -133,6 +131,7 @@ td::after{
   text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) si el texto no cabe */
   white-space: wrap;
 }
+
 
 .activo{
   text-align: left;
@@ -144,7 +143,8 @@ td::after{
   font-style: italic;
   /* background-color: #ffdddd; */
   border-radius: 8px;
-  border: 0.5px solid #9e3d0e;
+  border: 0.5px solid #ff8e24;
+  box-shadow: 0 0 5px #ff8e24;
 }
 
 button.registrar {
@@ -187,7 +187,7 @@ button.aInicio {
 th {
   background-color: #ff8e24;
   border-radius: 3px;
-  border: 1px solid #ffdda8;
+  /* border: 1px solid #ffdda8; */
   padding: 5px;
   color: #ffffff;
   font-weight: normal;
@@ -283,10 +283,13 @@ table {
   border-radius: 10px;
   background-color: #ffffff;
   width: 94%;
-  padding: 5px;
+  padding: 8px;
   color: #393939;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-spacing: 5px 9px;
 }
+
+
 
 .botonesPar {
   display: flex;
