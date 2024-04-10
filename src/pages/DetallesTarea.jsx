@@ -127,7 +127,7 @@ export const DetallesTarea = () => {
                       onChange={handleCheckboxChange}
                       checked={checkedItems.has(elemento[0])}
                     />
-                    <span> No completada.</span>
+                    <span>  &nbsp;&nbsp; Completada.</span>
                   </div>
                 ) : (
                   <span className="completada">Tarea completada.</span>
