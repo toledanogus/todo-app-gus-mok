@@ -148,6 +148,20 @@ td {
   box-shadow: 0 0 5px #ff8e24;
 }
 
+.vencido{
+  text-align: left;
+  max-width: 200px; /* Ancho máximo de la columna Nombre */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) si el texto no cabe */
+  white-space: wrap;
+  /* font-weight: bold; */
+  font-style: italic;
+  /* background-color: #ffdddd; */
+  border-radius: 8px;
+  border: 0.5px solid #1b1b1a;
+  box-shadow: 0 0 5px #413f3e;
+}
+
 button.registrar {
   background-color: #ffffff;
   color: #c74d07;
@@ -522,8 +536,7 @@ table {
 }
 
 .rbc-today{
-  /* background-color:#36e94f42 !important; */
-  background-color: #000000 !important;
+  background-color: #ffdf27 !important;
 }
 
 

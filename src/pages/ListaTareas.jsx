@@ -98,7 +98,10 @@ export const ListaTareas = () => {
               return (
                 <tr key={index}>
                   <td
-                    className={elemento[8] && elemento[8]==='nuevoValor' ? 'activo' : 'tituloTarea'}
+                    className={elemento[8] && elemento[8]==='nuevoValor' 
+                    ? 'activo' 
+                    : 
+                    'tituloTarea'}
                     id={`completa${elemento[3]}`}
                     onClick={() => aDetalles(elemento[7], elemento[6])}
                   ><span className={imageSource}></span>
