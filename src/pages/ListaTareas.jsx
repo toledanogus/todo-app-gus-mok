@@ -7,7 +7,7 @@ import etiquetaImage1 from "../assets/etiqueta1.png";
 import etiquetaImage2 from "../assets/etiqueta2.png";
 import etiquetaImage3 from "../assets/etiqueta3.png";
 import { es } from "date-fns/locale";
-import { format, startOfDay, isWithinInterval } from "date-fns";
+import { format, startOfDay, isWithinInterval, compareAsc } from "date-fns";
 
 export const ListaTareas = () => {
   // Constantes
@@ -100,8 +100,9 @@ export const ListaTareas = () => {
                   <td
                     className={elemento[8] && elemento[8]==='nuevoValor' 
                     ? 'activo' 
-                    : 
-                    'tituloTarea'}
+                    : compareAsc(startOfDay(new Date()), startOfDay(new Date(elemento[5]))) === 1 
+                    ? 'vencido'
+                    :'tituloTarea'}
                     id={`completa${elemento[3]}`}
                     onClick={() => aDetalles(elemento[7], elemento[6])}
                   ><span className={imageSource}></span>
